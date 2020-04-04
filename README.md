@@ -58,14 +58,15 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|cuisine_id|intger|null: false|
-|form_id|intger|null: false|
+|cuisine_id|integer|null: false|
+|form_id|integer|null: false|
 |detail|string||
-|prefectures_id|intger|null: false|
+|prefectures_id|integer|null: false|
 |city|string|null: false|
 |block|string||
 |building_name|string||
 |access|string||
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -76,10 +77,22 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|string||
-|restaurant_id|intgre|null :false, foreign_key: true|
+|restaurant_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :restaurant
+
+### menusテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|price|integer|null: false|
+|detail|string||
+|restaurant_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :restaurants
+- has_many :photo
 
 ## 実装予定
 * 評価機能
