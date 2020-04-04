@@ -57,7 +57,7 @@
 ### Restaurantsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, add_index :restaurants, name|
 |cuisine_id|integer|null: false|
 |form_id|integer|null: false|
 |detail|string||
@@ -91,8 +91,17 @@
 |restaurant_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :restaurants
-- has_many :photo
+- belongs_to :restaurant
+- has_many :photos
+
+### photosテーブル
+|Column|Type|Options|
+|------|----|-------|
+|photo|string||
+|menu_id|integer|null :false, foreign_key: ture|
+
+### Association
+- belongs_to :menu
 
 ## 実装予定
 * 評価機能
