@@ -50,3 +50,29 @@
 |nickname|string|null: false, unique: true, add_index :users, :name|
 |mail|string|null: false, unique: true|
 |password|string|null: false, unique: true|
+
+### Association
+- has_many :Restaurants
+
+### Restaurantsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|cuisine_id|intger|null: false|
+|form_id|intger|null: false|
+|detail|string||
+|prefectures_id|intger|null: false|
+|city|string|null: false|
+|block|string||
+|building_name|string||
+|access|string||
+
+## Association
+- belongs_to :user
+- has_many :images
+- has_many :menus
+
+
+## 実装予定
+* 評価機能
+* カテゴリー機能
