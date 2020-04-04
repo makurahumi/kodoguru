@@ -60,6 +60,7 @@
 |name|string|null: false, add_index :restaurants, name|
 |cuisine_id|integer|null: false|
 |form_id|integer|null: false|
+|rate|integer||
 |detail|string||
 |prefectures_id|integer|null: false|
 |city|string|null: false|
@@ -103,6 +104,7 @@
 ### Association
 - belongs_to :menu
 
-## 実装予定
+## 実装予定機能
 * 評価機能
 * カテゴリー機能
+* 検索機能
