@@ -67,11 +67,19 @@
 |building_name|string||
 |access|string||
 
-## Association
+### Association
 - belongs_to :user
 - has_many :images
 - has_many :menus
 
+### imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string||
+|restaurant_id|intgre|null :false, foreign_key: true|
+
+### Association
+- belongs_to :restaurant
 
 ## 実装予定
 * 評価機能
