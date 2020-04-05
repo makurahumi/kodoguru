@@ -1,0 +1,39 @@
+-# ヘッダー部分
+= render partial: "shared/header"
+
+-# 検索バー、各種ボタン部分
+.select
+  .select-wapper
+    .select-top
+      %form.select-top__search
+        %input{type: "search", class: "select-top__search--filed", placeholder: "例：店名など"}
+        %label.select-top__search__icon
+          = fa_icon "search", class: "selsect-top__search__icon--img"
+          = button_tag type: "submit", class: "select-top__search__icon--btn"
+
+    .select-bottom
+      .select-bottom__content
+        .select-bottom__content__new
+          =link_to "#", class: "select-bottom__content__new--btn" do
+            新規登録
+        .select-bottom__content__login
+          =link_to "#", class: "select-bottom__content__login--btn" do
+            ログイン
+
+        -# .select-bottom__content__post
+        -#   =link_to "#", class: "select-bottom__content__post--btn" do
+        -#     投稿する
+        -# .select-bottom__content__mypage
+        -#   =link_to "#", class: "select-bottom__content__mypage--btn" do
+        -#     マイページ
+
+-# 店舗情報表示部分
+.main-content
+  = render partial: "shared/display"
+  = render partial: "shared/display"
+  = render partial: "shared/display"
+  = render partial: "shared/display"
+  = render partial: "shared/display"
+
+-# フッター部分
+= render partial: "shared/footer"
