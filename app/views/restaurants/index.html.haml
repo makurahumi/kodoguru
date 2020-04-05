@@ -1,5 +1,7 @@
+-# ヘッダー部分
 = render partial: "shared/header"
 
+-# 検索バー、各種ボタン部分
 .select
   .select-wapper
     .select-top
@@ -24,3 +26,12 @@
         -# .select-bottom__content__mypage
         -#   =link_to "#", class: "select-bottom__content__mypage--btn" do
         -#     マイページ
+
+-# 店舗情報表示部分
+.main-content
+  = render partial: "shared/display"
+  = render partial: "shared/display"
+  = render partial: "shared/display"
+  = render partial: "shared/display"
+  = render partial: "shared/display"
+
