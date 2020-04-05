@@ -1,1 +1,13 @@
 = render partial: "shared/header"
+
+.select
+  .select-wapper
+    .select-top
+      %form.select-top__search
+        %input{type: "search", class: "select-top__search--filed", placeholder: "例：店名など"}
+        %label.select-top__search__icon
+          = fa_icon "search", class: "selsect-top__search__icon--img"
+          = button_tag type: "submit", class: "select-top__search__icon--btn"
+
+    .select-bottom
+      
