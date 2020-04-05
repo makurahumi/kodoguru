@@ -1,13 +1,15 @@
+// TOPページ上部
 .select {
   width: 100%;
   height: 100px;
-  padding: 5px;
+  padding: 8px 0;
 }
 
 .select-wapper {
   text-align: center;
 }
 
+// 検索バー部分
 .select-top {
 
   &__search {
@@ -15,7 +17,7 @@
     position: relative;
     
     &--filed {
-      width: 400px;
+      width: 450px;
       height: 40px;
       padding: 5px 40px 5px 5px;
       border-radius: 7px;
@@ -37,5 +39,75 @@
       display: none;
     }
   }
+}
 
+// 新規登録、ログイン、投稿、マイページボタン部分
+.select-bottom {
+  width: 100%;
+  padding: 7px 0;
+  border-bottom: 3px solid black;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content__new {
+    background-color: orangered;
+    margin-right: 40px;
+    @include top-btn;
+    
+
+    &--btn {
+      @include top-link-caption;
+    }
+  }
+
+  &__content__login {
+    background-color:aqua;
+    margin-right: 15px;
+    @include top-btn;
+
+    &--btn {
+      @include top-link-caption;
+    }
+  }
+
+  // &__content__post {
+  //   border: 2px solid blue;
+  //   margin-right: 40px;
+  //   @include top-btn;
+
+  //   &--btn {
+  //     text-decoration: none;
+  //     color: blue;
+  //   }
+  // }
+
+  // &__content__post:hover {
+  //   background-color: aqua;
+  // }
+
+  // &__content__post--btn:hover {
+  //   color: white;
+  // }
+
+  // &__content__mypage {
+  //   border: 2px solid orange;
+  //   margin-right: 15px;
+  //   @include top-btn;
+
+  //   &--btn {
+  //     text-decoration: none;
+  //     color: orange;
+  //   }
+  // }
+
+  // &__content__mypage:hover {
+  //   background-color: orange;
+  // }
+
+  // &__content__mypage--btn:hover {
+  //   color: white;
+  // }
 }
