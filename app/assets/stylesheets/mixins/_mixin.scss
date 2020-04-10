@@ -1,3 +1,4 @@
+// クリアフィックス用
 @mixin clearfix() {
   &::after {
     content: '';
@@ -16,4 +17,43 @@
 @mixin top-link-caption() {
   text-decoration: none;
   color: white;
+}
+
+// 新規アカウント・ログイン画面用
+@mixin box-size() {
+  height: 520px;
+  width: 980px;
+  border: solid 1px black;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+// 新規アカウント・ログインタイトル部分用
+@mixin caption-box() {
+  width: 50%;
+  float: left;
+  padding-left: 10px;
+}
+
+@mixin caption-font() {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+@mixin detail-set() {
+  padding-top: 10px;
+  font-size: 20px;
+  text-align: right;
+}
+
+// 新規アカウント・ログイン画面情報入力用
+@mixin name-caption() {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@mixin input-bar() {
+  height: 40px;
+  width: 400px;
+  padding-left: 5px;
 }

@@ -2,28 +2,19 @@
   padding-top: 30px;
 
   &__box {
-    height: 520px;
-    width: 980px;
-    border: solid 1px black;
-    margin: 0 auto;
-    padding: 25px;
+    @include box-size;
 
   // アカウントページタイトル部分
     &__caption {
-      width: 50%;
-      float: left;
-      padding-left: 10px;
+      @include caption-box;
 
       &--title {
-        font-size: 50px;
-        font-weight: bold;
+        @include caption-font;
         border-bottom: 4px solid orange;
       }
 
       &--detail {
-        padding-top: 10px;
-        font-size: 20px;
-        text-align: right;
+        @include detail-set;
       }
     }
 
@@ -50,14 +41,11 @@
         margin-bottom: 20px;
 
         .field-name {
-          font-size: 20px;
-          font-weight: bold;
+          @include name-caption;
         }
 
         .form-input {
-          height: 40px;
-          width: 400px;
-          padding-left: 5px;
+          @include input-bar;
         }
       }
 
