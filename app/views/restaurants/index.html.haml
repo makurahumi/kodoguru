@@ -20,6 +20,10 @@
             .select-bottom__content__mypage
               =link_to "#", class: "select-bottom__content__mypage--btn" do
                 マイページ
+            .logout
+              = link_to destroy_user_session_path, method: :delete do
+                ログアウト
+              
       
       - else
         .select-bottom
