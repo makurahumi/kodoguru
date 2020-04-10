@@ -1,0 +1,65 @@
+.login {
+  padding-top: 30px;
+
+  &__box {
+    @include box-size;
+
+    // ログインページタイトル部分
+    &__caption {
+      @include caption-box;
+
+      &--title {
+        @include caption-font;
+        border-bottom: 4px solid aqua;
+      }
+
+      &--detail {
+        @include detail-set;
+      }
+
+      // アカウントページ移動ボタン
+      &__signup {
+        margin-top: 50px;
+
+        &--text {
+          margin-bottom: 20px;
+        }
+
+        &--link {
+          margin-left: 30px;
+        }
+      }
+    }
+
+  // ログインページ情報入力部分
+    &__form {
+      width: 50%;
+      float: right;
+      padding: 30px 0 0 70px;
+
+      &--field {
+        margin-bottom: 20px;
+
+        .field-name {
+          @include name-caption;
+        }
+
+        .form-input {
+          @include input-bar;
+        }
+      }
+
+    // ログインページボタン部分
+      &--actions {
+        margin-top: 30px;
+        text-align: center;
+
+        .action-btn {
+          @include submit-btn;
+          border: 3px solid aqua;
+          background-color: aqua;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// アカウントページ用ログインページ移動ボタン
+.accountpage-login {
+    @include account-link-btn;
+
+    &__link {
+      @include account-link-text;
+    }
+}
+
+.loginpage-signup {
+  @include account-link-btn;
+
+  &__link {
+    @include account-link-text;
+  }
+}
+
+.loginpage-pass {
+  margin-top: 10px;
+
+  &__link {
+    @include account-link-text;
+  }
+}

@@ -1,0 +1,45 @@
+= render "shared/header"
+
+.signup
+  .signup__box
+    .signup__box__caption
+      %h2.signup__box__caption--title
+        New Account
+      .signup__box__caption--detail
+        新規アカウント作成
+      .signup__box__caption__login
+        .signup__box__caption__login--text
+          アカウントをお持ちの方は、下記からログインページへ
+        .signup__box__caption__login--link
+          = render "devise/shared/links"
+      
+    
+    .signup__box__form
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = render "devise/shared/error_messages", resource: resource
+
+        .signup__box__form--field
+          = f.label :nickname, class: "field-name"
+          %br/
+          = f.text_field :nickname, class: "form-input", placeholder: "ニックネームを入力"
+
+        .signup__box__form--field
+          = f.label :email, class: "field-name"
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input", placeholder: "PC・スマホのアドレス可"
+
+        .signup__box__form--field
+          = f.label :password, class: "field-name"
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length} characters minimum)
+          %br/
+          = f.password_field :password, autocomplete: "new-password", class: "form-input", placeholder: "アルファベット・数字で6文字以上"
+
+        .signup__box__form--field
+          = f.label :password_confirmation, class: "field-name"
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-input", placeholder: "パスワードを再度入力"
+
+        .signup__box__form--actions
+          = f.submit "Sign up", class: "action-btn"

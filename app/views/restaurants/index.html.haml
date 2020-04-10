@@ -11,21 +11,31 @@
           = fa_icon "search", class: "selsect-top__search__icon--img"
           = button_tag type: "submit", class: "select-top__search__icon--btn"
 
-    .select-bottom
-      .select-bottom__content
-        .select-bottom__content__new
-          =link_to "#", class: "select-bottom__content__new--btn" do
-            新規登録
-        .select-bottom__content__login
-          =link_to "#", class: "select-bottom__content__login--btn" do
-            ログイン
+      - if user_signed_in?
+        .select-bottom
+          .select-bottom__content
+            .select-bottom__content__post
+              =link_to "#", class: "select-bottom__content__post--btn" do
+                投稿する
+            .select-bottom__content__mypage
+              =link_to "#", class: "select-bottom__content__mypage--btn" do
+                マイページ
+            .logout
+              = link_to destroy_user_session_path, method: :delete do
+                ログアウト
+              
+      
+      - else
+        .select-bottom
+          .select-bottom__content
+            .select-bottom__content__new
+              =link_to new_user_registration_path, class: "select-bottom__content__new--btn" do
+                新規登録
+            .select-bottom__content__login
+              =link_to new_user_session_path, class: "select-bottom__content__login--btn" do
+                ログイン
 
-        -# .select-bottom__content__post
-        -#   =link_to "#", class: "select-bottom__content__post--btn" do
-        -#     投稿する
-        -# .select-bottom__content__mypage
-        -#   =link_to "#", class: "select-bottom__content__mypage--btn" do
-        -#     マイページ
+     
 
 -# 店舗情報表示部分
 .main-content
