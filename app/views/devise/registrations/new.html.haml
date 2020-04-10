@@ -34,7 +34,7 @@
             %em
               (#{@minimum_password_length} characters minimum)
           %br/
-          = f.password_field :password, autocomplete: "new-password", class: "form-input", placeholder: "アルファベット・数字で6文字まで"
+          = f.password_field :password, autocomplete: "new-password", class: "form-input", placeholder: "アルファベット・数字で6文字以上"
 
         .signup__box__form--field
           = f.label :password_confirmation, class: "field-name"

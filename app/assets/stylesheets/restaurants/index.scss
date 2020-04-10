@@ -73,48 +73,48 @@
     }
   }
 
-  // &__content__post {
-  //   border: 2px solid blue;
-  //   margin-right: 40px;
-  //   @include top-btn;
+  &__content__post {
+    border: 2px solid blue;
+    margin-right: 40px;
+    @include top-btn;
 
-  //   &--btn {
-  //     text-decoration: none;
-  //     color: blue;
-  //   }
-  // }
+    &--btn {
+      text-decoration: none;
+      color: blue;
+    }
+  }
 
-  // &__content__post:hover {
-  //   background-color: aqua;
-  // }
+  &__content__post:hover {
+    background-color: aqua;
+  }
 
-  // &__content__post--btn:hover {
-  //   color: white;
-  // }
+  &__content__post--btn:hover {
+    color: white;
+  }
 
-  // &__content__mypage {
-  //   border: 2px solid orange;
-  //   margin-right: 15px;
-  //   @include top-btn;
+  &__content__mypage {
+    border: 2px solid orange;
+    margin-right: 15px;
+    @include top-btn;
 
-  //   &--btn {
-  //     text-decoration: none;
-  //     color: orange;
-  //   }
-  // }
+    &--btn {
+      text-decoration: none;
+      color: orange;
+    }
+  }
 
-  // &__content__mypage:hover {
-  //   background-color: orange;
-  // }
+  &__content__mypage:hover {
+    background-color: orange;
+  }
 
-  // &__content__mypage--btn:hover {
-  //   color: white;
-  // }
+  &__content__mypage--btn:hover {
+    color: white;
+  }
 }
 
 // 店舗情報テンプレート部分背景
 .main-content {
   padding: 20px 0 50px 0;
-  background-color: rgb(194, 191, 191);
+  background-color: $basic-gray;
 }
 
