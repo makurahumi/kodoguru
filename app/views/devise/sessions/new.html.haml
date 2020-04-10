@@ -5,7 +5,7 @@
     .login__box__caption
       %h2.login__box__caption--title
         Log in
-      .login__box__caption--detaile
+      .login__box__caption--detail
         ログイン
       .login__box__caption__signup
         .login__box__caption__signup--text
@@ -33,7 +33,7 @@
         - if devise_mapping.rememberable?
           .login__box__form--field
             = f.check_box :remember_me
-            = f.label :remember_me
+            = f.label :remember_me, class: "field-name"
 
         .login__box__form--actions
-          = f.submit "Log in"
+          = f.submit "Log in", class: "action-btn"
