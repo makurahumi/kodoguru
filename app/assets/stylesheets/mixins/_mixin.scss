@@ -65,3 +65,18 @@
   color: white;
   font-weight: bold;
 }
+
+// 新規アカウント・ログイン用移動リンク
+@mixin account-link-btn() {
+  height: 40px;
+  width: 100px;
+  padding-top: 5px;
+  background-color: $basic-gray;
+  border: 2px solid black;
+  text-align: center;
+}
+
+@mixin account-link-text() {
+  text-decoration: none;
+  color: blue
+}
