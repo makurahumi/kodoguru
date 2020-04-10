@@ -8,17 +8,8 @@
     margin: 0 auto;
     padding: 25px;
 
-    &--loginlink {
-      text-align: center;
-      margin-top: 50px
-    //   height: 40px;
-    //   width: 80px;
-    //   background-color: gray;
-    //   border: 3px solid black;
-    }
-  }
-
-    &__box__caption {
+  // アカウントページタイトル部分
+    &__caption {
       width: 50%;
       float: left;
       padding-left: 10px;
@@ -36,38 +27,54 @@
       }
     }
 
-  &__box__form {
-    width: 50%;
-    float: right;
-    padding: 30px 0 0 70px;
+  // ログインページ移動ボタン
+    &__login {
+      margin-top: 50px;
 
-    &--field {
-      margin-bottom: 20px;
-
-      .field-name {
-        font-size: 20px;
-        font-weight: bold;
+      &--text {
+        margin-bottom: 20px;
       }
 
-      .form-input {
-        height: 40px;
-        width: 400px;
-        padding-left: 5px;
+      &--link {
+        margin-left: 30px;
       }
     }
 
-    &--actions {
-      margin-top: 30px;
-      text-align: center;
+  // アカウントページ情報入力部分
+    &__form {
+      width: 50%;
+      float: right;
+      padding: 30px 0 0 70px;
 
-      .action-btn {
-        height: 50px;
-        width: 300px;
-        font-size: 25px;
-        border: 3px solid orange;
-        background-color: orange;
-        color: white;
-        font-weight: bold;
+      &--field {
+        margin-bottom: 20px;
+
+        .field-name {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .form-input {
+          height: 40px;
+          width: 400px;
+          padding-left: 5px;
+        }
+      }
+
+    // アカウント作成ボタン部分
+      &--actions {
+        margin-top: 30px;
+        text-align: center;
+
+        .action-btn {
+          height: 50px;
+          width: 300px;
+          font-size: 25px;
+          border: 3px solid orange;
+          background-color: orange;
+          color: white;
+          font-weight: bold;
+        }
       }
     }
   }

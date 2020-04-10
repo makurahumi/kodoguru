@@ -1,0 +1,14 @@
+// アカウントページ用ログインページ移動ボタン
+.accountpage-login {
+    height: 40px;
+    width: 100px;
+    padding-top: 5px;
+    background-color: rgb(209, 208, 208);
+    border: 2px solid black;
+    text-align: center;
+
+    &__link {
+      text-decoration: none;
+      color: blue
+    }
+}

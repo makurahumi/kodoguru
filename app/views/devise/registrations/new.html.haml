@@ -7,8 +7,11 @@
         New Account
       .signup__box__caption--detail
         新規アカウント作成
-      .signup__box--loginlink
-        = render "devise/shared/links"
+      .signup__box__login
+        .signup__box__login--text
+          アカウントをお持ちの方は、下記からログインページへ
+        .signup__box__login--link
+          = render "devise/shared/links"
       
     
     .signup__box__form
