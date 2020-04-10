@@ -16,18 +16,18 @@
       &--detail {
         @include detail-set;
       }
-    }
 
-  // ログインページ移動ボタン
-    &__login {
-      margin-top: 50px;
+    // ログインページ移動ボタン
+      &__login {
+        margin-top: 50px;
 
-      &--text {
-        margin-bottom: 20px;
-      }
+        &--text {
+          margin-bottom: 20px;
+        }
 
-      &--link {
-        margin-left: 30px;
+        &--link {
+          margin-left: 30px;
+        }
       }
     }
 

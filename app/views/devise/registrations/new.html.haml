@@ -1,16 +1,16 @@
 = render "shared/header"
 
 .signup
-  .signup__box.clearfix
+  .signup__box
     .signup__box__caption
       %h2.signup__box__caption--title
         New Account
       .signup__box__caption--detail
         新規アカウント作成
-      .signup__box__login
-        .signup__box__login--text
+      .signup__box__caption__login
+        .signup__box__caption__login--text
           アカウントをお持ちの方は、下記からログインページへ
-        .signup__box__login--link
+        .signup__box__caption__login--link
           = render "devise/shared/links"
       
     
