@@ -39,6 +39,22 @@
             .input-required
               必須
           .restaurant-input__salse--field
-            = f.select :form_id, { prompt: "------" }, class: "select-field__form"
+            = f.select :form_id, prompt: "------", class: "select-field__form"
+        
+        .restaurant-input__rate
+          .restaurant-input__rate--title
+            ・評価
+            .input-any
+              任意
+          .restaurant-input__rate--field
+
+        .restaurant-input__hours
+          .restaurant-input__hours--title
+            ・営業時間
+            .input-any
+              任意
+          .restaurant-input__hours--field
+            = f.text_field :hours, class: "text-field__form", placeholder: "例：10時〜21時"
+          
 
 = render partial: "shared/footer"
