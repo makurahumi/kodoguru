@@ -30,11 +30,7 @@
     border-bottom: 2px solid $basic-gray;
 
     &--title {
-      padding-left: 30px;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 5px;
-      display: flex;
+      @include new-actionform-title;
     }
 
     &--detail {
@@ -51,19 +47,26 @@
   }
 
   &__storename {
-    padding: 20px 0;
-    border-bottom: 2px solid $basic-gray;
+    @include new-actionform-exterior;
 
     &--title {
-      padding-left: 30px;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 5px;
-      display: flex;
+      @include new-actionform-title;
     }
 
     &--field {
       padding-left: 70px
+    }
+  }
+
+  &__genre {
+    @include new-actionform-exterior;
+
+    &--title {
+      @include new-actionform-title;
+    }
+
+    &--field {
+      padding-left: 70px;
     }
   }
 }
@@ -81,7 +84,7 @@
 
 .text-field__form {
   height: 40px;
-  width: 625px;
+  width: 600px;
   border: 2px solid $basic-gray;
   border-radius: 2px;
   padding: 3px;

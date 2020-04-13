@@ -24,5 +24,13 @@
               必須
           .restaurant-input__storename--field
             = f.text_field :name, class: "text-field__form", placeholder: "例：グルメモ食堂"
+        
+        .restaurant-input__genre
+          .restaurant-input__genre--title
+            ・ジャンル
+            .input-required
+              必須
+          .restaurant-input__genre--field
+            = f.text_field :cuisine, class: "text-field__form"
 
 = render partial: "shared/footer"
