@@ -114,4 +114,11 @@
             .restaurant-input__address__right__building--field
               =f.text_field :building, class: "text-field__address", placeholder: "例：食いしん坊"
 
+        .restaurant-input__btn
+          .restaurant-input__btn--post
+            = f.submit "投稿する", class: "submit-btn"
+          .restaurant-input__btn--return
+            = link_to root_path do
+              戻る
+
 = render partial: "shared/footer"

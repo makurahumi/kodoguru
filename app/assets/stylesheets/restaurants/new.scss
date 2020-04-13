@@ -195,6 +195,15 @@
       }
     }
   }
+
+  &__btn {
+    padding-top: 10px;
+    text-align: center;
+
+    &--post {
+      padding-bottom: 10px;
+    }
+  }
 }
 
 .input-required {
@@ -248,4 +257,13 @@
   border: 2px solid $basic-gray;
   border-radius: 3px;
   padding: 3px;
+}
+
+.submit-btn {
+  height: 40px;
+  width: 200px;
+  border: 2px solid orangered;
+  background-color: orangered;
+  font-size: 20px;
+  color: white;
 }
