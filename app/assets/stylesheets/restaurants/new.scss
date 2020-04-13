@@ -49,4 +49,40 @@
       background-color: $basic-gray;
     }
   }
+
+  &__storename {
+    padding: 20px 0;
+    border-bottom: 2px solid $basic-gray;
+
+    &--title {
+      padding-left: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: flex;
+    }
+
+    &--field {
+      padding-left: 70px
+    }
+  }
+}
+
+.input-required {
+  border: solid 1px orangered;
+  background-color: orangered;
+  border-radius: 3px;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  color: white;
+  margin-left: 10px;
+}
+
+.text-field__form {
+  height: 40px;
+  width: 625px;
+  border: 2px solid $basic-gray;
+  border-radius: 2px;
+  padding: 3px;
 }

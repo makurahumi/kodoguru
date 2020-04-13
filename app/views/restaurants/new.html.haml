@@ -16,5 +16,13 @@
           .restaurant-input__imagebox--detail
             ※ 1枚目の写真がサムネイルに使われます
           .restaurant-input__imagebox__main
+      
+        .restaurant-input__storename
+          .restaurant-input__storename--title
+            ・店名
+            .input-required
+              必須
+          .restaurant-input__storename--field
+            = f.text_field :name, class: "text-field__form", placeholder: "例：グルメモ食堂"
 
 = render partial: "shared/footer"
