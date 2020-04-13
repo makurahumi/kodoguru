@@ -71,6 +71,13 @@
               任意
           .restaurant-input__holiday--field
             = f.text_field :holiday, class: "text-field__form", placeholder: "例：水曜日定休"
-
+        
+        .restaurant-input__access
+          .restaurant-input__access--title
+            ・アクセス
+            .input-any
+              任意
+          .restaurant-input__access--field
+            = f.text_field :access, class: "text-field__form", placeholder: "例：JR池袋駅西口より徒歩5分"
 
 = render partial: "shared/footer"

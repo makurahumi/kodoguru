@@ -126,6 +126,19 @@
       padding-left: 70px;
     }
   }
+
+  &__access {
+    padding: 20px 0;
+    border-bottom: 2px solid $basic-gray;
+
+    &--title {
+      @include new-actionform-title;
+    }
+
+    &--field {
+      padding-left: 70px;
+    }
+  }
 }
 
 .input-required {
