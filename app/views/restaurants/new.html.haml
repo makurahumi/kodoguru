@@ -25,6 +25,14 @@
           .restaurant-input__storename--field
             = f.text_field :name, class: "text-field__form", placeholder: "例：グルメモ食堂"
         
+        .restaurant-input__details
+          .restaurant-input__details--title
+            ・おすすめポイント
+            .input-any
+              任意
+          .restaurant-input__details--field
+            = f.text_area :detail, class: "text-area__form"
+        
         .restaurant-input__genre
           .restaurant-input__genre--title
             ・ジャンル

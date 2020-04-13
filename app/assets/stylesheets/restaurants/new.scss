@@ -48,7 +48,6 @@
 
   &__storename {
     padding: 20px 0;
-    border-bottom: 2px solid $basic-gray;
 
     &--title {
       @include new-actionform-title;
@@ -56,6 +55,19 @@
 
     &--field {
       padding-left: 70px
+    }
+  }
+
+  &__details {
+    padding: 20px 0;
+    border-bottom: 2px solid $basic-gray;
+
+    &--title {
+      @include new-actionform-title;
+    }
+
+    &--field {
+      padding-left: 70px;
     }
   }
 
@@ -140,6 +152,14 @@
 
 .text-field__form {
   height: 40px;
+  width: 600px;
+  border: 2px solid $basic-gray;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.text-area__form {
+  height: 100px;
   width: 600px;
   border: 2px solid $basic-gray;
   border-radius: 3px;
