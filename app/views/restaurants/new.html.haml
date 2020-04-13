@@ -1,3 +1,20 @@
 = render partial: "shared/header"
 
+.restaurant
+  .restaurant-page
+    .restaurant-form
+      .restaurant-form__title
+        店舗情報入力
+    .restaurant-input
+      = form_with model: @restaurant do |f|
+        
+        .restaurant-input__imagebox
+          .restaurant-input__imagebox--title
+            ・外観写真（最大4枚まで）
+            .input-required
+              必須
+          .restaurant-input__imagebox--detail
+            ※ 1枚目の写真がサムネイルに使われます
+          .restaurant-input__imagebox__main
+
 = render partial: "shared/footer"
