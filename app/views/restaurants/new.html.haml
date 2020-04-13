@@ -55,6 +55,14 @@
               任意
           .restaurant-input__hours--field
             = f.text_field :hours, class: "text-field__form", placeholder: "例：10時〜21時"
-          
+        
+        .restaurant-input__holiday
+          .restaurant-input__holiday--title
+            ・定休日
+            .input-any
+              任意
+          .restaurant-input__holiday--field
+            = f.text_field :holiday, class: "text-field__form", placeholder: "例：水曜日定休"
+
 
 = render partial: "shared/footer"

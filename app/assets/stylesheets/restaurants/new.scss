@@ -102,6 +102,18 @@
       padding-left: 70px;
     }
   }
+
+  &__holiday {
+    padding: 20px 0;
+
+    &--title {
+      @include new-actionform-title;
+    }
+
+    &--field {
+      padding-left: 70px;
+    }
+  }
 }
 
 .input-required {

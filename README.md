@@ -67,8 +67,7 @@
 |block|string||
 |building_name|string||
 |access|string||
-|open|time||
-|close|time||
+|hours|string||
 |holiday|string||
 |user_id|integer|null: false, foreign_key: true|
 
