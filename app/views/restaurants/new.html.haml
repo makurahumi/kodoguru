@@ -31,6 +31,14 @@
             .input-required
               必須
           .restaurant-input__genre--field
-            = f.text_field :cuisine, class: "text-field__form"
+            = f.select :cuisine_id, prompt: "------", class: "select-field__form"
+        
+        .restaurant-input__salse
+          .restaurant-input__salse--title
+            ・営業形態
+            .input-required
+              必須
+          .restaurant-input__salse--field
+            = f.select :form_id, { prompt: "------" }, class: "select-field__form"
 
 = render partial: "shared/footer"
