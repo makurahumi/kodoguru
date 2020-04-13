@@ -79,5 +79,39 @@
               任意
           .restaurant-input__access--field
             = f.text_field :access, class: "text-field__form", placeholder: "例：JR池袋駅西口より徒歩5分"
+        
+        .restaurant-input__address
+          .restaurant-input__address__left
+            .restaurant-input__address__left--text
+              ・住所
+          
+          .restaurant-input__address__right
+            .restaurant-input__address__right__prefecture
+              都道府県
+              .input-required
+                必須
+            .restaurant-input__address__right__prefecture--field
+              = f.select :prefectur_id, class: "select-field__form"
+            
+            .restaurant-input__address__right__city
+              市区町村
+              .input-any
+                任意
+            .restaurant-input__address__right__city--field
+              = f.text_field :city, class: "text-field__address", placeholder: "例：グルメ市メモ町"
+            
+            .restaurant-input__address__right__block
+              番地
+              .input-any
+                任意
+            .restaurant-input__address__right__block--field
+              = f.text_field :block, class: "text-field__address", placeholder: "例：思い出1-3-5"
+            
+            .restaurant-input__address__right__building
+              建物名
+              .input-any
+                任意
+            .restaurant-input__address__right__building--field
+              =f.text_field :building, class: "text-field__address", placeholder: "例：食いしん坊"
 
 = render partial: "shared/footer"

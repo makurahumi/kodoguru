@@ -139,6 +139,62 @@
       padding-left: 70px;
     }
   }
+
+  &__address {
+    margin: 20px 0 0 80px;
+    width: 600px;
+    border: 2px solid black;
+    display: flex;
+
+    &__left {
+      border-right: 2px solid black;
+
+      &--text {
+        font-size: 20px;
+        padding: 20px 10px 0 10px;
+        font-weight: bold;
+      }
+    }
+
+    &__right {
+      padding: 20px 0 20px 15px;
+
+      &__prefecture {
+        @include new-actionform-title;
+
+        &--field {
+          padding-left: 50px;
+        }
+      }
+
+      &__city {
+        padding-top: 10px;
+        @include new-actionform-title;
+
+        &--field {
+          padding-left: 50px;
+        }
+      }
+
+      &__block {
+        padding-top: 10px;
+        @include new-actionform-title;
+
+        &--field {
+          padding-left: 50px;
+        }
+      }
+
+      &__building {
+        padding-top: 10px;
+        @include new-actionform-title;
+
+        &--field {
+          padding-left: 50px;
+        }
+      }
+    }
+  }
 }
 
 .input-required {
@@ -184,4 +240,12 @@
   width: 300px;
   border: 2px solid $basic-gray;
   border-radius: 3px;
+}
+
+.text-field__address {
+  height: 30px;
+  width: 350px;
+  border: 2px solid $basic-gray;
+  border-radius: 3px;
+  padding: 3px;
 }
