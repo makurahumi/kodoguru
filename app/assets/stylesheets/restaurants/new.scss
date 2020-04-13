@@ -1,0 +1,52 @@
+.restaurant {
+  background-color: $basic-gray;
+  padding: 15px 0 25px 0;
+}
+
+.restaurant-page {
+  width: 800px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.restaurant-form {
+  height: 50px;
+  text-align: center;
+  border-bottom: 5px solid $basic-gray;
+
+  &__title {
+    padding: 0 10px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.restaurant-input {
+  padding: 20px 0;
+
+  &__imagebox {
+    padding-bottom: 20px;
+    border-bottom: 2px solid $basic-gray;
+
+    &--title {
+      padding-left: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: flex;
+    }
+
+    &--detail {
+      font-size: 15px;
+      padding: 0 0 10px 50px;
+    }
+
+    &__main {
+      margin: 0 auto;
+      height: 200px;
+      width: 600px;
+      background-color: $basic-gray;
+    }
+  }
+}
