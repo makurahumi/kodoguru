@@ -62,14 +62,14 @@
 |form_id|integer|null: false|
 |rate|integer||
 |detail|string||
-|prefectures_id|integer|null: false|
+|prefecture_id|integer|null: false|
 |city|string|null: false|
 |block|string||
 |building_name|string||
 |access|string||
 |hours|string||
 |holiday|string||
-|user_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
