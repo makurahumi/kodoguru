@@ -20,12 +20,12 @@
                   - @restaurant.images.each_with_index do |image, i|
                     = image_tag image.image.url, data: { index: i }, width: "100", height: "100"
                 = f.fields_for :images do |image|
-                  = image.label :image, class: "js-file_grop", "data-index": image.index do
+                  = image.label :image, class: "js-file_group", "data-index": image.index do
                     = image.file_field :image, class: "js-file"
                   - if @restaurant.persisted?
                     = image.check_box :destroy, data:{ index: image.index }, class: "hidden-destroy"
                 - if @restaurant.persisted?
-                  .js-file_group{"data-index" => "#{@restaurant.images.count}"}
+                  %label.js-file_group{"data-index" => "#{@restaurant.images.count}"}
                     = file_field_tag :image, name: "restaurant[images_attributes][#{@restaurant.images.count}][image]",class: "js-file"
             
         .restaurant-input__storename

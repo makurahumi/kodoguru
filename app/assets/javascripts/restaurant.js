@@ -12,7 +12,7 @@ $(function() {
   // プレビュー用のimgタグを生成する関数
   const buildImage = (index, url) => {
     const html = `<div class="preview">
-                    <img data-index="${index}" src="${url}" width="100px" height="100px"></br>
+                    <img data-index="${index}" src="${url}" width="130px" height="110px"></br>
                     <label for="restaurant_images_attributes_${index}_src"  class= "js-edit" data-index="${index}"></br>
                     <div class="js-remove" data-index="${index}">削除</div>
                   </div>`
@@ -38,9 +38,9 @@ $(function() {
     if (img = $(`img[data-index="${targetIndex}"]`)[0]) {
       img.setAttribute('src', blobUrl);
     } else {  // 新規画像の処理
-      $('#previews').append(buildImage(targetIndex,blobUrl));
+      $('.js-file_group:last').append(buildImage(targetIndex,blobUrl));
       // fileIndexの先頭の数字を使って、inputを生成
-      $('#image-field').append(buildFileField(fileIndex[0]));
+      $('#previews').append(buildFileField(fileIndex[0]));
       fileIndex.shift();
       // 末尾に１足した数を追加する
       fileIndex.push(fileIndex[fileIndex.length - 1] + 1)

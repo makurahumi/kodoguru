@@ -267,3 +267,39 @@
   font-size: 20px;
   color: white;
 }
+
+// 画像投稿機能用
+#image-field {
+  display: flex;
+}
+
+#previews {
+  display: flex;
+}
+
+.js-file {
+  display: none;
+}
+
+//プレビュー部分
+.js-file_group {
+  height: 200px;
+  width: 150px;
+  background-color: $basic-gray;
+  border: 0.5px dashed black;
+  position: relative;
+}
+
+.preview{
+  padding: 10px 0 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.js-remove {
+  text-align: center;
+  height: 20px;
+  width: 130px;
+  background-color: white;
+}
+
