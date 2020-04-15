@@ -1,7 +1,7 @@
 # README
 
 ## アプリ名
-## Kodogru
+## Grumemo
 
 ## 概要
 お気に入りの飲食店やお弁当販売店などをレビュー形式で投稿、共有、閲覧できるアプリです。  
@@ -62,12 +62,14 @@
 |form_id|integer|null: false|
 |rate|integer||
 |detail|string||
-|prefectures_id|integer|null: false|
+|prefecture_id|integer|null: false|
 |city|string|null: false|
 |block|string||
 |building_name|string||
 |access|string||
-|user_id|integer|null: false, foreign_key: true|
+|hours|string||
+|holiday|string||
+|user_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user

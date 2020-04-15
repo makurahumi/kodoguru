@@ -80,3 +80,12 @@
   text-decoration: none;
   color: blue
 }
+
+// 店舗情報登録ページ用
+@mixin new-actionform-title() {
+  padding-left: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: flex;
+}
