@@ -70,13 +70,19 @@
         -#       任意
         -#   .restaurant-input__rate--field
 
-        -# .restaurant-input__hours
-        -#   .restaurant-input__hours--title
-        -#     ・営業時間
-        -#     .input-any
-        -#       任意
-        -#   .restaurant-input__hours--field
-        -#     = f.text_field :hours, class: "text-field__form", placeholder: "例：10時〜21時"
+        .restaurant-input__hours
+          .restaurant-input__hours--title
+            ・営業時間
+            .input-any
+              任意
+          .restaurant-input__hours__field
+            .restaurant-input__hours__field--open
+              = f.time_select :open, {prompt: "------"}, class: "select-field__time-form"
+            .restaurant-input__hours__field--caption
+              〜
+            .restaurant-input__hours__field--closed
+              = f.time_select :closed, {prompt: "------"}, class: "select-field__time-form"
+            
         
         .restaurant-input__holiday
           .restaurant-input__holiday--title

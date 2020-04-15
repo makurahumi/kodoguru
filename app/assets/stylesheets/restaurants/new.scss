@@ -1,8 +1,10 @@
+// 新規投稿背景部分
 .restaurant {
   background-color: $basic-gray;
   padding: 15px 0 25px 0;
 }
 
+// 新規投稿入力部分全体
 .restaurant-page {
   width: 800px;
   background-color: white;
@@ -10,6 +12,7 @@
   padding: 10px 0;
 }
 
+// 新規投稿入力タイトル部分
 .restaurant-form {
   height: 50px;
   text-align: center;
@@ -22,9 +25,11 @@
   }
 }
 
+// 新規投稿入力フィールド
 .restaurant-input {
   padding: 20px 0;
 
+  // 画像投稿部分
   &__imagebox {
     padding-bottom: 20px;
     border-bottom: 2px solid $basic-gray;
@@ -44,8 +49,106 @@
       width: 600px;
       background-color: $basic-gray;
     }
+
+    // 画像投稿機能JS用
+    #image-field {
+      display: flex;
+    }
+
+    #previews {
+      display: flex;
+    }
+
+    .js-file {
+      display: none;
+    }
+
+    //プレビュー部分
+    .js-file_group {
+      height: 200px;
+      width: 150px;
+      background-color: $basic-gray;
+      border: 0.5px dashed black;
+      position: relative;
+    }
+
+    .preview{
+      padding: 10px 0 0 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .js-remove {
+      text-align: center;
+      height: 20px;
+      width: 130px;
+      background-color: white;
+    }
   }
 
+  // 必須・任意見出し
+  .input-required {
+    border: solid 1px orangered;
+    background-color: orangered;
+    border-radius: 3px;
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    color: white;
+    margin-left: 10px;
+  }
+
+  .input-any {
+    border: solid 1px gray;
+    background-color: gray;
+    border-radius: 3px;
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    color: white;
+    margin-left: 10px;
+  }
+
+  // 投稿フォームバー・セレクトボックス用
+  .text-field__form {
+    height: 40px;
+    width: 600px;
+    border: 2px solid $basic-gray;
+    border-radius: 3px;
+    padding: 3px;
+  }
+
+  .text-area__form {
+    height: 100px;
+    width: 600px;
+    border: 2px solid $basic-gray;
+    border-radius: 3px;
+    padding: 3px;
+  }
+
+  .select-field__form {
+    height: 40px;
+    width: 300px;
+    border: 2px solid $basic-gray;
+    border-radius: 3px;
+  }
+
+  .select-field__time-form {
+    height: 40px;
+    width: 100px;
+    border: 2px solid $basic-gray;
+    border-radius: 3px;
+  }
+
+  .text-field__address {
+    height: 30px;
+    width: 350px;
+    border: 2px solid $basic-gray;
+    border-radius: 3px;
+    padding: 3px;
+  }
+
+  // テキスト情報入力部分
   &__storename {
     padding: 20px 0;
 
@@ -110,8 +213,21 @@
       @include new-actionform-title;
     }
 
-    &--field {
+    &__field {
+      display: flex;
       padding-left: 70px;
+
+      &--open {
+        margin-right: 10px;
+      }
+
+      &--caption {
+        font-size: 25px;
+      }
+
+      &--closed {
+        margin-left: 10px;
+      }
     }
   }
 
@@ -140,6 +256,7 @@
     }
   }
 
+  // 住所登録部分
   &__address {
     margin: 20px 0 0 80px;
     width: 600px;
@@ -196,6 +313,7 @@
     }
   }
 
+  // 投稿ボタン部分
   &__btn {
     padding-top: 10px;
     text-align: center;
@@ -203,103 +321,14 @@
     &--post {
       padding-bottom: 10px;
     }
+
+    .submit-btn {
+      height: 40px;
+      width: 200px;
+      border: 2px solid orangered;
+      background-color: orangered;
+      font-size: 20px;
+      color: white;
+    }
   }
 }
-
-.input-required {
-  border: solid 1px orangered;
-  background-color: orangered;
-  border-radius: 3px;
-  height: 30px;
-  width: 50px;
-  text-align: center;
-  color: white;
-  margin-left: 10px;
-}
-
-.input-any {
-  border: solid 1px gray;
-  background-color: gray;
-  border-radius: 3px;
-  height: 30px;
-  width: 50px;
-  text-align: center;
-  color: white;
-  margin-left: 10px;
-}
-
-.text-field__form {
-  height: 40px;
-  width: 600px;
-  border: 2px solid $basic-gray;
-  border-radius: 3px;
-  padding: 3px;
-}
-
-.text-area__form {
-  height: 100px;
-  width: 600px;
-  border: 2px solid $basic-gray;
-  border-radius: 3px;
-  padding: 3px;
-}
-
-.select-field__form {
-  height: 40px;
-  width: 300px;
-  border: 2px solid $basic-gray;
-  border-radius: 3px;
-}
-
-.text-field__address {
-  height: 30px;
-  width: 350px;
-  border: 2px solid $basic-gray;
-  border-radius: 3px;
-  padding: 3px;
-}
-
-.submit-btn {
-  height: 40px;
-  width: 200px;
-  border: 2px solid orangered;
-  background-color: orangered;
-  font-size: 20px;
-  color: white;
-}
-
-// 画像投稿機能用
-#image-field {
-  display: flex;
-}
-
-#previews {
-  display: flex;
-}
-
-.js-file {
-  display: none;
-}
-
-//プレビュー部分
-.js-file_group {
-  height: 200px;
-  width: 150px;
-  background-color: $basic-gray;
-  border: 0.5px dashed black;
-  position: relative;
-}
-
-.preview{
-  padding: 10px 0 0 10px;
-  position: relative;
-  z-index: 1;
-}
-
-.js-remove {
-  text-align: center;
-  height: 20px;
-  width: 130px;
-  background-color: white;
-}
-
