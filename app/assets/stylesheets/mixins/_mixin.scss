@@ -89,3 +89,27 @@
   margin-bottom: 5px;
   display: flex;
 }
+
+// 店舗情報表示ページ用
+@mixin body-bottom-solid() {
+  border-bottom: 4px solid $basic-gray;
+}
+
+@mixin show-caption() {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@mixin table-solid() {
+  border-collapse: collapse;
+  border: solid rgb(250, 220, 220);
+}
+
+@mixin show-page-btns {
+  height: 40px;
+  width: 250px;
+  font-size: 25px;
+  border-radius: 3px;
+  text-align: center;
+  margin: 0 auto;
+}

@@ -1,0 +1,36 @@
+.menu-box {
+  height: 120px;
+  width: 550px;
+  background-color: white;
+  margin: 0 auto;
+  border: 2px solid cornflowerblue;
+  margin-bottom: 10px;
+  
+  &__contents {
+    padding: 10px;
+
+    .menu-photo {
+      border: 2px solid $basic-gray;
+      box-shadow: 1px 1px 5px;
+    }
+
+    &--photo {
+      float: left;
+    }
+
+    &__detail {
+      float: right;
+      color: black;
+
+      &--name {
+        font-size: 40px;
+        margin-right: 80px;
+      }
+
+      &--price {
+        font-size: 30px;
+        margin-left: 170px;
+      }
+    }
+  }
+}

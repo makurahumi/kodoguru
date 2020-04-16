@@ -52,7 +52,8 @@
 |password|string|null: false, unique: true|
 
 ### Association
-- has_many :Restaurants
+- has_many :restaurants
+- has_many :menus
 
 ### Restaurantsテーブル
 |Column|Type|Options|
@@ -67,7 +68,8 @@
 |block|string||
 |building_name|string||
 |access|string||
-|hours|string||
+|open|time||
+|closed|time||
 |holiday|string||
 |user_id|references|null: false, foreign_key: true|
 
@@ -89,22 +91,14 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|photo|string||
 |price|integer|null: false|
 |detail|string||
 |restaurant_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :restaurant
-- has_many :photos
-
-### photosテーブル
-|Column|Type|Options|
-|------|----|-------|
-|photo|string||
-|menu_id|integer|null :false, foreign_key: ture|
-
-### Association
-- belongs_to :menu
+- belongs_to :user
 
 ## 実装予定機能
 * 評価機能

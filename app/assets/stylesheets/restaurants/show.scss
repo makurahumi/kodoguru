@@ -1,0 +1,206 @@
+// 詳細表示背景部分
+.restaurant-show {
+  background-color: $basic-gray;
+  padding: 15px 0 25px 0;
+}
+
+// 詳細表示情報記載部分全体
+.restaurant-info {
+  width: 800px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 10px 0;
+
+  // リンク文字用
+  .show-link {
+    @include top-link-caption;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $basic-gray;
+
+    &--name {
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+
+  // 画像表示部分
+  &__images {
+    padding: 10px;
+    @include body-bottom-solid;
+
+    &__section {
+      border: 6px solid orange;
+      border-radius: 6px;
+      padding: 20px 0;
+
+      &--caption {
+        @include show-caption;
+        padding: 0 0 20px 30px;
+      }
+
+      &--main {
+        text-align: center;
+        padding-bottom: 8px;
+        border-bottom: 3px solid orange;
+
+        .main-view {
+          border: 3px solid $basic-gray;
+          box-shadow: 1px 1px 10px;
+        }
+      }
+
+      &__sub {
+        text-align: center;
+        padding: 10px 0 10px 20px;
+
+        &--views {
+          padding-top: 15px;
+
+          .sub-views {
+            border: 3px solid $basic-gray;
+            box-shadow: 1px 1px 10px;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // 店舗情報表示部分
+  &__exibition {
+    padding: 10px 20px;
+
+    &--caption {
+      @include show-caption;
+      padding: 10px 0 10px 20px;
+    }
+
+    &__box {
+      margin: 0 auto;
+      width: 700px;
+      font-size: 25px;
+
+      th {
+        width: 220px;
+        background-color: $basic-gray;
+        padding: 10px;
+        @include table-solid;
+      }
+
+      td {
+        padding-left: 20px;
+        @include table-solid;
+      }
+    }
+  }
+
+  // レビュー表紙部分
+  &__recommend {
+    padding: 10px 20px;
+    @include body-bottom-solid;
+
+    &--caption {
+      @include show-caption;
+      padding: 10px 0 10px 20px;
+    }
+
+    &__textbox {
+      width: 600px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      border: solid $basic-gray;
+      box-shadow: 1px 1px 4px;
+    
+
+      &--detail {
+        font-size: 20px;
+        padding: 10px;
+      }
+    }
+  }
+
+  // 編集・削除・戻るボタン部分
+  &__action {
+    padding: 10px 0;
+    @include body-bottom-solid;
+
+    &__btns {
+
+      &__edit {
+        @include show-page-btns;
+        border: 2px solid orangered;
+        background-color: orangered;
+      }
+
+      &__delete {
+        @include show-page_btns;
+        border: 2px solid gray;
+        background-color: gray;
+        margin-top: 10px;
+        color: white;
+      }
+
+      &__return {
+        @include show-page-btns;
+        border: 2px solid $basic-gray;
+        background-color: $basic-gray;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  // メニュー表示部分
+  &__menus {
+    padding: 10px 20px;
+
+    &--caption {
+      @include show-caption;
+      padding: 10px 0 0 20px
+    }
+
+    &__box {
+      width: 600px;
+      height: 520px;
+      margin: 0 auto;
+      background-color: $basic-gray;
+      border: 3px solid black;
+      margin-top: 10px;
+
+      &__title {
+        border-bottom: 2px solid black;
+        text-align: center;
+        padding: 5px;
+
+        &--text {
+          font-size: 25px;
+        }
+      }
+
+      &__index {
+        padding: 10px 0;
+      }
+    }
+
+    // メニュー用ボタン部分
+    &__btns {
+      padding-top: 10px;
+
+      &__post {
+        @include show-page-btns;
+        border: 2px solid orange;
+        background-color: orange;
+      }
+
+      &__return {
+        @include show-page-btns;
+        border: 2px solid $basic-gray;
+        background-color: $basic-gray;
+        margin-top: 10px;
+      }
+    }
+  }
+}
