@@ -57,4 +57,19 @@ $(function() {
       // 画像入力欄が0にならないようにする
       if ($('.js-file').length == 0) $('#image-field').append(buildFileField(fileIndex[0]));
   });
+
+  // 編集ページ画像削除用
+  $('#image-field').on('click', '.js-remove__edit', function() {
+    const targetIndex = $(this).parent().data('index');
+    // 該当indexを振られているチェックボックスを取得
+    const hiddenCheck = $(`input[data-index="${targetIndex}"].hidden-destroy`);
+    // もしチェックボックスが存在すればチェックを入れる
+    if (hiddenCheck) hiddenCheck.prop("checked", true);
+
+    $(this).parent().remove();
+    $(`img[data-index="${targetIndex}"]`).remove();
+
+    // 画像入力欄が0にならないようにする
+    if ($('.js-file').length == 0) $('#image-field').append(buildFileField(fileIndex[0]));
+  })
 });

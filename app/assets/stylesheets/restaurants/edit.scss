@@ -1,0 +1,29 @@
+// 編集ページ画像投稿部分用(その他のタグはnew.scssに記述)
+.edit-previews {
+  display: flex;
+}
+
+.edit-preview {
+  position: relative;
+  margin: 10px;
+  z-index: 1;
+}
+
+.js-file_group--edit {
+  height: 200px;
+  width: 150px;
+  background-color: $basic-gray;
+  border: 0.5px dashed black;
+  position: relative;
+  display: flex;
+}
+
+.js-append {
+  margin: 144px 0 0 10px;
+  @include edit-page-btn;
+}
+
+.js-remove__edit {
+  margin: 144px 0 0 0;
+  @include edit-page-btn;
+}
