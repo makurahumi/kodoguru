@@ -90,6 +90,16 @@
   display: flex;
 }
 
+// 店舗情報編集ページ用
+@mixin edit-page-btn() {
+  height: 30px;
+  width: 63px;
+  background-color: white;
+  text-align: center;
+  padding-top: 4px;
+  border: 1px solid black;
+}
+
 // 店舗情報表示ページ用
 @mixin body-bottom-solid() {
   border-bottom: 4px solid $basic-gray;

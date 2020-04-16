@@ -23,10 +23,10 @@
               - if @restaurant.persisted?
                 - @restaurant.images.each_with_index do |image, i|
                   .edit-previews
-                    = image_tag image.image.url, data: { index: i }, width: "100", height: "100"
+                    = image_tag image.image.url, data: { index: i }, width: "130", height: "110", class: "edit-preview"
               #previews
                 = f.fields_for :images do |image|
-                  = image.label :image, class: "js-file_group", "data-index": image.index do
+                  = image.label :image, class: "js-file_group--edit", "data-index": image.index do
                     = image.file_field :image, class: "js-file"
                     .js-append 変更
                     .js-remove__edit 削除
