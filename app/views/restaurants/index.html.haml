@@ -39,11 +39,11 @@
 
 -# 店舗情報表示部分
 .main-content
-  = render partial: "shared/display"
-  = render partial: "shared/display"
-  = render partial: "shared/display"
-  = render partial: "shared/display"
-  = render partial: "shared/display"
+  - @restaurants.each do |restaurant|
+    = render partial: "shared/display", locals: {restaurant: restaurant}
+
+  .main-content__paginations
+    = paginate(@restaurants)
 
 -# フッター部分
 = render partial: "shared/footer"
