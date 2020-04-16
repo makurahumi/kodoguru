@@ -17,11 +17,6 @@
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
 
         .login__box__form--field
-          = f.label :nickname, class: "field-name"
-          %br/
-          = f.text_field :nickname, class: "form-input", placeholder: "ニックネームを入力"
-
-        .login__box__form--field
           = f.label :email, class: "field-name"
           %br/
           = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input", placeholder: "メールアドレスを入力"
