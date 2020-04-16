@@ -8,7 +8,7 @@
       .restaurant-form__title
         店舗情報入力
     .restaurant-input
-      = form_with model: @restaurant, method: :post, local: true do |f|
+      = form_with model: @restaurant, method: :patch, local: true do |f|
         
         -# 画像投稿部分
         .restaurant-input__imagebox
@@ -144,7 +144,7 @@
         -# 投稿・戻るボタン部分
         .restaurant-input__btn
           .restaurant-input__btn--post
-            = f.submit "投稿する", class: "submit-btn"
+            = f.submit "変更する", class: "submit-btn"
           .restaurant-input__btn--return
             = link_to root_path do
               戻る
