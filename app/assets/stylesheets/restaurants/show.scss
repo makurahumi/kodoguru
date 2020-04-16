@@ -164,7 +164,7 @@
 
     &__box {
       width: 600px;
-      height: 300px;
+      height: 520px;
       margin: 0 auto;
       background-color: $basic-gray;
       border: 3px solid black;
@@ -178,6 +178,10 @@
         &--text {
           font-size: 25px;
         }
+      }
+
+      &__index {
+        padding: 10px 0;
       }
     }
 
