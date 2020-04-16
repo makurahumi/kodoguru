@@ -1,0 +1,151 @@
+-# ヘッダー部分
+= render partial: "shared/header"
+
+-# ページ全体・タイトル部分
+.restaurant-show
+  .restaurant-info
+    .restaurant-info__title
+      .restaurant-info__title--name
+        = @restaurant.name
+    
+    -# 画像表示部分
+    .restaurant-info__images
+      .restaurant-info__images__section
+        .restaurant-info__images__section--caption
+          ・お店の様子
+        .restaurant-info__images__section--main
+          = image_tag "#{@restaurant.images.first.image}", class: "main-view", width: "350px", height: "200px"
+        .restaurant-info__images__section__sub
+          .restaurant-info__images__section__sub--views
+            -if @restaurant.images.second
+              = image_tag "#{@restaurant.images.second.image}", class: "sub-views", width: "150px", height: "100px"
+            -if @restaurant.images.third
+              = image_tag "#{@restaurant.images.third.image}", class: "sub-views", width: "150px", height: "100px"
+            -if @restaurant.images.fourth
+              = image_tag "#{@restaurant.images.fourth.image}", class: "sub-views", width: "150px", height: "100px"
+    
+    -# 店舗情報表示部分
+    .restaurant-info__exibition
+      .restaurant-info__exibition--caption
+        ・店舗情報
+      %table.restaurant-info__exibition__box
+        %tbody
+          %tr
+            %th ジャンル
+            %td.restaurant-info__exibition__box--content
+              = @restaurant.cuisine.name
+          %tr
+            %th 営業形態
+            %td.restaurant-info__exibition__box--content
+              = @restaurant.form_id
+
+          - if @restaurant.open.present?
+            %tr
+              %th 開店時間
+              %td.restaurant-info__exibition__box--content
+                = @restaurant.open.strftime('%H:%M')
+
+          - if @restaurant.closed.present?
+            %tr
+              %th 閉店時間
+              %td.restaurant-info__exibition__box--content
+                = @restaurant.closed.strftime('%H:%M')
+
+          - if @restaurant.holiday.present?
+            %tr
+              %th 定休日
+              %td.restaurant-info__exibition__box--content
+                = @restaurant.holiday
+          -# %tr
+          -#   %th 評価
+          -#   %td.restaurant-info__exibition__box--content
+          %tr
+            %th 住所(都道府県・市区町村)
+            %td.restaurant-info__exibition__box--content
+              = @restaurant.prefecture.name
+              = @restaurant.city
+
+          - if @restaurant.block.present?
+            %tr
+              %th 住所（番地）
+              %td.restaurant-info__exibition__box--content
+                = @restaurant.block
+
+          - if @restaurant.building_name.present?
+            %tr
+              %th 住所（建物名）
+              %td.restaurant-info__exibition__box--content
+                = @restaurant.building_name
+
+    .restaurant-info__recommend
+      - if @restaurant.detail.present?
+        .restaurant-info__recommend--caption
+          ・おすすめポイント
+        .restaurant-info__recommend__textbox
+          .restaurant-info__recommend__textbox--detail
+            = @restaurant.detail
+        
+    -# 編集・削除・戻るボタン部分
+    .restaurant-info__action
+      - if user_signed_in?
+        - if @restaurant.user_id == current_user.id
+          .restaurant-info__action__btns
+            .restaurant-info__action__btns__edit
+              =link_to edit_restaurant_path, class: "show-link" do
+                .restaurant-info__action__btns__edit--text
+                  編集する
+            .restaurant-info__action__btns__delete
+              .restaurant-info__action__btns__delete--text
+                削除する
+            .restaurant-info__action__btns__return
+              = link_to root_path, class: "show-link" do
+                .restaurant-info__action__btns__return--text
+                  戻る
+        - else
+          .restaurant-info__action__btns
+            .restaurant-info__action__btns__return
+              = link_to root_path, class: "show-link" do
+                .restaurant-info__action__btns__return--text
+                  戻る
+      - else
+        .restaurant-info__action__btns
+          .restaurant-info__action__btns__return
+            = link_to root_path, class: "show-link" do
+              .restaurant-info__action__btns__return--text
+                戻る
+    
+    -# メニュー一覧表示部分
+    .restaurant-info__menus
+      .restaurant-info__menus--caption
+        ・メニュー一覧
+      .restaurant-info__menus__box
+        .restaurant-info__menus__box__title
+          .restaurant-info__menus__box__title--text
+            メニュー
+        .restaurant-info__menus__box__index
+
+      -# メニュー投稿・戻るボタン部分
+      .restaurant-info__menus__btns
+        - if user_signed_in?
+          - if @restaurant.user_id = current_user.id
+            .restaurant-info__menus__btns__post
+              =link_to "#", class: "show-link" do
+                .restaurant-info__menus__btns__post--text
+                  メニューを投稿する
+            .restaurant-info__menus__btns__return
+              = link_to root_path, class: "show-link" do
+                .restaurant-info__menus__btns__return--text
+                  戻る
+          - else
+            .restaurant-info__menus__btns__return
+              = link_to root_path, class: "show-link" do
+                .restaurant-info__menus__btns__return--text
+                  戻る
+        - else
+          .restaurant-info__menus__btns__return
+            = link_to root_path, class: "show-link" do
+              .restaurant-info__menus__btns__return--text
+                戻る
+
+-# フッター部分
+= render partial: "shared/footer"

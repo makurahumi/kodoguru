@@ -1,5 +1,7 @@
+-# ヘッダー部分
 = render partial: "shared/header"
 
+-# ページ全体・タイトル部分
 .restaurant
   .restaurant-page
     .restaurant-form
@@ -8,6 +10,7 @@
     .restaurant-input
       = form_with model: @restaurant, method: :post, local: true do |f|
         
+        -# 画像投稿部分
         .restaurant-input__imagebox
           .restaurant-input__imagebox--title
             ・外観写真（最大4枚まで）
@@ -29,7 +32,8 @@
                 - if @restaurant.persisted?
                   %label.js-file_group{"data-index" => "#{@restaurant.images.count}"}
                     = file_field_tag :image, name: "restaurant[images_attributes][#{@restaurant.images.count}][image]",class: "js-file"
-            
+
+        -# 情報入力部分 
         .restaurant-input__storename
           .restaurant-input__storename--title
             ・店名
@@ -134,6 +138,7 @@
             .restaurant-input__address__right__building--field
               =f.text_field :building_name, class: "text-field__address", placeholder: "例：食いしん坊"
 
+        -# 投稿・戻るボタン部分
         .restaurant-input__btn
           .restaurant-input__btn--post
             = f.submit "投稿する", class: "submit-btn"
@@ -141,4 +146,5 @@
             = link_to root_path do
               戻る
 
+-# フッター部分
 = render partial: "shared/footer"
