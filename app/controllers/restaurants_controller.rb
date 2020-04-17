@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only:[:show, :edit, :update]
+  before_action :set_restaurant, only:[:show, :edit, :update, :destroy]
 
   def index
     @restaurants = Restaurant.includes(:images).page(params[:page]).per(5).order("created_at DESC")
@@ -31,6 +31,14 @@ class RestaurantsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+      if @restaurant.destroy
+        redirect_to root_path
+      else
+        redirect_to restaurant_path
+      end
   end
 
   private
