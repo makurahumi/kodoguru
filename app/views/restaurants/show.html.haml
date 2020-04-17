@@ -14,7 +14,10 @@
         .restaurant-info__images__section--caption
           ・お店の様子
         .restaurant-info__images__section--main
-          = image_tag "#{@restaurant.images.first.image}", class: "main-view", width: "350px", height: "200px"
+          - if @restaurant.images.present?
+            = image_tag "#{@restaurant.images.first.image}", class: "main-view", width: "350px", height: "200px"
+          - else
+            = image_tag "nodata.jpg", class: "main-view", width: "350px", height:"200px"
         .restaurant-info__images__section__sub
           .restaurant-info__images__section__sub--views
             -if @restaurant.images.second
