@@ -1,10 +1,13 @@
 .main-box
   .restaurant-box
-    = link_to restaurant_path(restaurant_url=1), class: "restaurant-box__info" do
+    = link_to restaurant_path(restaurant.id), class: "restaurant-box__info" do
       .restaurant-box__info--store
-        = image_tag "nodata.jpg", width: "584px", height:"300px"
+        - if restaurant.images.present?
+          = image_tag "#{restaurant.images.first.image}", width: "584px", height:"300px"
+        - else
+          = image_tag "nodata.jpg", width: "584px", height:"300px"
       .restaurant-box__info__detail
         .restaurant-box__info__detail--name
-          店名：オリオン食堂
+          店名： #{restaurant.name}
         .restaurant-box__info__detail--contributor
-          投稿者：まくらふみ
+          投稿者: #{restaurant.user.nickname}

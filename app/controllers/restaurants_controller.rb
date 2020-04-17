@@ -2,6 +2,7 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only:[:show, :edit, :update]
 
   def index
+    @restaurants = Restaurant.includes(:images).page(params[:page]).per(5).order("created_at DESC")
   end
 
   def new

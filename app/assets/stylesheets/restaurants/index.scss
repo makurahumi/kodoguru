@@ -116,5 +116,15 @@
 .main-content {
   padding: 20px 0 50px 0;
   background-color: $basic-gray;
+
+  &__paginations {
+    padding-top: 10px;
+    font-size: 25px;
+    
+    .pagination {
+      text-align: center;
+      
+    }
+  }
 }
 
