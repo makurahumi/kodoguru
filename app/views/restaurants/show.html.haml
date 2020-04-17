@@ -98,8 +98,9 @@
                 .restaurant-info__action__btns__edit--text
                   編集する
             .restaurant-info__action__btns__delete
-              .restaurant-info__action__btns__delete--text
-                削除する
+              = link_to restaurant_path(@restaurant), class: "show-link", method: :delete do
+                .restaurant-info__action__btns__delete--text
+                  削除する
             .restaurant-info__action__btns__return
               = link_to root_path, class: "show-link" do
                 .restaurant-info__action__btns__return--text
