@@ -331,5 +331,19 @@
       font-size: 20px;
       color: white;
     }
+
+    &--return {
+      margin: 0 auto;
+      height: 40px;
+      width: 200px;
+      border: 2px solid $basic-gray;
+      background-color: $basic-gray;
+      font-size: 20px;
+      
+      .return-btn {
+        text-decoration: none;
+        color: white;
+      }
+    }
   }
 }
