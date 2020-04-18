@@ -19,7 +19,7 @@
         = render "devise/shared/error_messages", resource: resource
 
         .signup__box__form--field
-          = f.label :nickname, class: "field-name"
+          = f.label :nickname, "ニックネーム", class: "field-name"
           %br/
           = f.text_field :nickname, class: "form-input", placeholder: "ニックネームを入力"
 
