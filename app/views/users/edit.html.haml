@@ -1,0 +1,24 @@
+= render partial: "shared/header"
+
+.name-edit
+  .name-edit__box
+    .name-edit__box__caption
+      .name-edit__box__caption--title
+        Nickname Edit
+      .name-edit__box__caption--detail
+        ニックネーム編集
+
+    .name-edit__box__form
+      = form_for(current_user) do |f|
+
+        .name-edit__box__form--field
+          = f.label :nickanme, "ニックネーム", class: "field-name"
+          %br
+          = f.text_field :nickname, class: "form-input", placeholder: "新しいニックネームを入力"
+
+        .name-edit__box__form--actions
+          = f.submit "Update", class: "action-btn--patch"
+        
+        .name-edit__box__form--return
+          = link_to user_path, class: "action-btn--return" do
+            戻る

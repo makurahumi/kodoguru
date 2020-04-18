@@ -14,11 +14,17 @@
         .mypage-index__wapper__left__btnbox__menu
           .mypage-index__wapper__left__btnbox__menu--text
             ・メニュー
+        .mypage-index__wapper__left__btnbox__nickname
+          .mypage-index__wapper__left__btnbox__nickname--icon
+            = fa_icon 'edit'
+          .mypage-index__wapper__left__btnbox__nickname--text
+            = link_to edit_user_path(current_user.id), class: "link-none" do
+              ニックネーム変更
         .mypage-index__wapper__left__btnbox__edit
           .mypage-index__wapper__left__btnbox__edit--icon
             = fa_icon 'cog'
           .mypage-index__wapper__left__btnbox__edit--text
-            = link_to "#", class: "link-none" do
+            = link_to edit_user_registration_path(current_user.id), class: "link-none" do
               ユーザー情報変更
         .mypage-index__wapper__left__btnbox--logout
           = link_to destroy_user_session_path, class: "link-none", method: :delete do

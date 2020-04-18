@@ -1,0 +1,61 @@
+.edit {
+  padding-top: 30px;
+
+  &__box {
+    @include box-size;
+
+  // 編集ページタイトル部分
+    &__caption {
+      @include caption-box;
+
+      &--title {
+        @include caption-font;
+        border-bottom: 4px solid greenyellow;
+      }
+
+      &--detail {
+        @include detail-set;
+      }
+
+    // 戻るボタン部分
+      &__extra {
+        margin-top: 50px;
+
+        &--return {
+          margin-top: 30px;
+        }
+      }
+    }
+
+  // 編集情報入力部分
+    &__form {
+      width: 50%;
+      float: right;
+      padding: 20px 0 0 70px;
+
+      &--field {
+        margin-bottom: 10px;
+
+        .field-name {
+          @include name-caption;
+        }
+
+        .form-input {
+          @include input-bar;
+        }
+      }
+
+    // 編集確定ボタン
+      &--actions {
+        margin-top: 20px;
+        text-align: center;
+
+        .action-btn {
+          @include submit-btn;
+          border: 3px solid greenyellow;
+          background-color: greenyellow;
+        }
+      }
+    }
+  }
+}

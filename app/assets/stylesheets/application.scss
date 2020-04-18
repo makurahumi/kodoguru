@@ -6,16 +6,17 @@
 @import "./devise/new_account";
 @import "./devise/login";
 @import "./devise/links";
+@import "./devise/edit";
 @import "./shared/header";
 @import "./shared/display";
 @import "./shared/footer";
 @import "./shared/menuindex";
+@import "./users/edit";
 @import "./users/show";
 @import "./restaurants/edit";
 @import "./restaurants/index";
 @import "./restaurants/new";
 @import "./restaurants/show";
-
 
 *{
   box-sizing: border-box;
