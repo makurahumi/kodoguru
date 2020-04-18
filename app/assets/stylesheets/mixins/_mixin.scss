@@ -123,3 +123,13 @@
   text-align: center;
   margin: 0 auto;
 }
+
+// マイページボタン用
+@mixin mypage-btn() {
+  font-size: 20px;
+  height: 40px;
+  width: 200px;
+  padding-top: 2px;
+  text-align: center;
+  border-radius: 4px;
+}

@@ -1,0 +1,90 @@
+.mypage-index {
+  background-color: wheat;
+
+  &__wapper {
+    padding: 10px 20px;
+    display: flex;
+
+    &__left {
+      margin: 10px 0 0 20px;
+
+      &__title {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .link-none {
+        text-decoration: none;
+        color: white;
+      }
+
+      &__btnbox {
+        width: 220px;
+        height: 170px;
+        background-color: white;
+        padding: 10px 0 0 10px;
+        border-radius: 5px;
+        margin-left: 30px;
+
+        &__menu {
+          margin-bottom: 15px;
+
+          &--text {
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+
+        &__edit {
+          @include mypage-btn;
+          border: 2px solid orangered;
+          background-color: orangered;
+          margin-right: 20px;
+          padding-left: 5px;
+          display: flex;
+          margin-bottom: 20px;
+  
+          &--icon {
+            color: white;
+            margin-right: 7px;
+          }
+        }
+      
+        &--logout {
+          @include mypage-btn;
+          border: 2px solid $basic-gray;
+          background-color: $basic-gray;
+        }
+      }
+    }
+
+    &__right {
+      margin-left: 100px;
+      padding-top: 30px;
+
+      &__title {
+        height: 60px;
+        width: 400px;
+        background-color: white;
+        border-radius: 25px;
+  
+        &--text {
+          font-size: 36px;
+          padding-left: 30px;
+          font-weight: bold;
+        }
+      }
+  
+      &__display {
+        margin: 20px 0 0 40px;
+      }
+
+      &__paginations {
+        margin: 10px 0 5px 180px;
+        font-size: 30px;
+      }
+    }
+  }
+}
+

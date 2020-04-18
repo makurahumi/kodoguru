@@ -3,6 +3,7 @@
   width: 100%;
   height: 110px;
   padding: 8px 0;
+  border-bottom: 3px solid $basic-gray;
 }
 
 .select-wapper {
@@ -45,7 +46,6 @@
 .select-bottom {
   width: 100%;
   padding: 7px 0;
-  border-bottom: 3px solid black;
 
   &__content {
     display: flex;
@@ -115,7 +115,7 @@
 // 店舗情報テンプレート部分背景
 .main-content {
   padding: 20px 0 50px 0;
-  background-color: $basic-gray;
+  background-color: wheat;
 
   &__paginations {
     padding-top: 10px;
