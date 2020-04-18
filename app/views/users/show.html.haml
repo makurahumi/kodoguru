@@ -21,7 +21,7 @@
             = link_to "#", class: "link-none" do
               ユーザー情報変更
         .mypage-index__wapper__left__btnbox--logout
-          = link_to "#", class: "link-none" do
+          = link_to destroy_user_session_path, class: "link-none", method: :delete do
             ログアウト
 
     -# マイページカレントユーザー投稿表示部分
