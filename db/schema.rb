@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_15_005020) do
+ActiveRecord::Schema.define(version: 2020_04_18_114011) do
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image"
@@ -18,6 +18,19 @@ ActiveRecord::Schema.define(version: 2020_04_15_005020) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_images_on_restaurant_id"
+  end
+
+  create_table "menus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "menuname", null: false
+    t.string "photo"
+    t.integer "price", null: false
+    t.string "detail"
+    t.bigint "restaurant_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_menus_on_restaurant_id"
+    t.index ["user_id"], name: "index_menus_on_user_id"
   end
 
   create_table "restaurants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -55,5 +68,7 @@ ActiveRecord::Schema.define(version: 2020_04_15_005020) do
   end
 
   add_foreign_key "images", "restaurants"
+  add_foreign_key "menus", "restaurants"
+  add_foreign_key "menus", "users"
   add_foreign_key "restaurants", "users"
 end
