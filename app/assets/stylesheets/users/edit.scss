@@ -1,0 +1,63 @@
+.name-edit {
+  padding-top: 30px;
+
+  &__box {
+    height: 450px;
+    width: 600px;
+    border: solid 1px black;
+    margin: 0 auto;
+    padding: 25px;
+
+    &__caption {
+      padding-left: 10px;
+
+      &--title {
+        @include caption-font;
+        border-bottom: 4px solid orangered;
+      }
+
+      &--detail {
+        @include detail-set;
+      }
+    }
+
+    &__form {
+      margin: 40px 0 0 70px;
+
+      &--field {
+        margin-bottom: 10px;
+
+        .field-name {
+          @include name-caption;
+        }
+
+        .form-input {
+          @include input-bar;
+        }
+      }
+
+      &--actions {
+        margin: 20px 0 0 40px;
+
+        .action-btn--patch {
+          @include submit-btn;
+          border: 3px solid orangered;
+          background-color: orangered;
+        }
+      }
+
+      &--return {
+        margin: 20px 0 0 150px;
+        
+
+        .action-btn--return {
+          font-size: 25px;
+          text-decoration: none;
+          color: white;
+          border: 3px solid $basic-gray;
+          background-color: $basic-gray;
+        }
+      }
+    }
+  }
+}
