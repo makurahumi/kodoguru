@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   
   root "restaurants#index"
   resources :restaurants
+  
+  resources :menus
 
   resources :users, only: [:show, :edit, :update]
 end
