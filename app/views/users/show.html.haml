@@ -18,7 +18,7 @@
           .mypage-index__wapper__left__btnbox__nickname--icon
             = fa_icon 'edit'
           .mypage-index__wapper__left__btnbox__nickname--text
-            = link_to "#", class: "link-none" do
+            = link_to edit_user_path(current_user.id), class: "link-none" do
               ニックネーム変更
         .mypage-index__wapper__left__btnbox__edit
           .mypage-index__wapper__left__btnbox__edit--icon
