@@ -8,11 +8,12 @@
         Edit #{resource_name.to_s.humanize}
       .edit__box__caption--detail
         ユーザー情報編集
-      %h3.eidt__box__caption__return
+      %h3.edit__box__caption__extra
         Cancel my account
         %p
         Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-        = link_to "Back", :back
+        .edit__box__caption__extra--return
+          = link_to "Back", :back
 
     .edit__box__form
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
