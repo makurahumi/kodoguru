@@ -1,0 +1,42 @@
+-# ヘッダー部分
+= render partial: "shared/header"
+
+-# マイページ全体
+.mypage-index
+  .mypage-index__wapper
+    .mypage-index__wapper__left
+      .mypage-index__wapper__left__title
+        .mypage-index__wapper__left__title--caption
+          マイページ
+
+      -# マイページボタンメニュー部分
+      .mypage-index__wapper__left__btnbox
+        .mypage-index__wapper__left__btnbox__menu
+          .mypage-index__wapper__left__btnbox__menu--text
+            ・メニュー
+        .mypage-index__wapper__left__btnbox__edit
+          .mypage-index__wapper__left__btnbox__edit--icon
+            = fa_icon 'cog'
+          .mypage-index__wapper__left__btnbox__edit--text
+            = link_to "#", class: "link-none" do
+              ユーザー情報変更
+        .mypage-index__wapper__left__btnbox--logout
+          = link_to "#", class: "link-none" do
+            ログアウト
+
+    -# マイページカレントユーザー投稿表示部分
+    .mypage-index__wapper__right
+      .mypage-index__wapper__right__title
+        .mypage-index__wapper__right__title--text
+          = "#{@user.nickname}"
+          さんの投稿
+  
+      .mypage-index__wapper__right__display
+        - @restaurants.each do |restaurant|
+          = render partial: "shared/display", locals:{restaurant: restaurant}
+
+      .mypage-index__wapper__right__paginations
+        = paginate(@restaurants)
+
+-# フッター部分
+= render partial: "shared/footer"
