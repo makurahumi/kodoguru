@@ -18,7 +18,7 @@
           .mypage-index__wapper__left__btnbox__edit--icon
             = fa_icon 'cog'
           .mypage-index__wapper__left__btnbox__edit--text
-            = link_to "#", class: "link-none" do
+            = link_to edit_user_registration_path(current_user.id), class: "link-none" do
               ユーザー情報変更
         .mypage-index__wapper__left__btnbox--logout
           = link_to destroy_user_session_path, class: "link-none", method: :delete do
