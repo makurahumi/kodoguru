@@ -18,6 +18,11 @@
           .menu-input__photobox--detail
             ※サムネイルにも使われます
           .menu-input__photobox__main
+            #photo-field
+              #photo-preview
+                - if @menu.persisted?
+                  = image_tag @menu.photo.url, width: "100px", height: "100px"
+                = f.file_field :photo, class: "js-file__menu"
 
         -# 情報入力部分
         .menu-input__menuname
