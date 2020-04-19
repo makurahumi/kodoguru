@@ -81,13 +81,74 @@
   color: blue
 }
 
-// 店舗情報登録ページ用
+// 全新規投稿・編集ページ共通部分
 @mixin new-actionform-title() {
   padding-left: 30px;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
   display: flex;
+}
+
+@mixin required-exterior() {
+  border: solid 1px orangered;
+  background-color: orangered;
+  border-radius: 3px;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  color: white;
+  margin-left: 10px;
+}
+
+@mixin any-exterior() {
+  border: solid 1px gray;
+  background-color: gray;
+  border-radius: 3px;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  color: white;
+  margin-left: 10px;
+}
+
+@mixin text-form() {
+  height: 40px;
+  width: 600px;
+  border: 2px solid $basic-gray;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+@mixin text-area-box() {
+  height: 100px;
+  width: 600px;
+  border: 2px solid $basic-gray;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+@mixin submit-exterior() {
+  height: 40px;
+  width: 200px;
+  border: 2px solid orangered;
+  background-color: orangered;
+  font-size: 20px;
+  color: white;
+}
+
+@mixin return-exterior() {
+  margin: 0 auto;
+  height: 40px;
+  width: 200px;
+  border: 2px solid $basic-gray;
+  background-color: $basic-gray;
+  font-size: 20px;
+}
+
+@mixin return-text() {
+  text-decoration: none;
+  color: white;
 }
 
 // 店舗情報編集ページ用
