@@ -1,0 +1,55 @@
+-# ヘッダー部分
+= render partial: "shared/header"
+
+.menu
+  .menu-page
+    .menu-form
+      .menu-form__title
+        メニュー情報入力
+    .menu-input
+      = form_with model: @menu do |f|
+
+        -# 画像投稿部分
+        .menu-input__photobox
+          .menu-input__photobox--title
+            ・メニュー写真（１枚のみ）
+            .input-required
+              必須
+          .menu-input__photobox--detail
+            ※サムネイルにも使われます
+          .menu-input__photobox__main
+
+        -# 情報入力部分
+        .menu-input__menuname
+          .menu-input__menuname--title
+            ・メニュー名
+            .input-required
+              必須
+          .menu-input__menuname--field
+            = f.text_field :menuname, class: "text-field__form", placeholder: "例：生姜焼き定食"
+        
+        .menu-input__price
+          .menu-input__price--title
+            ・商品価格
+            .input-required
+              必須
+          .menu-input__price--field
+            = f.text_field :price, class: "text-field__form", placeholder: "例：1000円"
+
+        .menu-input__details
+          .menu-input__details--title
+            ・おすすめポイント
+            .input-any
+              任意
+          .menu-input__details--field
+            = f.text_area :detail, class: "text-area__form"
+        
+        .menu-input__btn
+          .menu-input__btn--submit
+            = f.submit "投稿する", class: "submit-btn"
+          .menu-input__btn--return
+            = link_to root_path, class: "return-btn" do
+              戻る
+
+-# フッター部分
+= render partial: "shared/footer"
