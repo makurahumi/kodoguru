@@ -66,6 +66,10 @@
       width: 600px;
       background-color: $basic-gray;
     }
+
+    #photo-preview {
+      padding-left: 25px;
+    }
   }
 
   &__menuname {
@@ -104,6 +108,7 @@
     }
   }
 
+  // メニュー投稿ボタン部分
   &__btn {
     padding-top: 10px;
     text-align: center;
@@ -124,8 +129,4 @@
       @include return-text;
     }
   }
-}
-
-#photo-preview {
-  padding-left: 25px;
 }
