@@ -94,7 +94,7 @@
         - if @restaurant.user_id == current_user.id
           .restaurant-info__action__btns
             .restaurant-info__action__btns__edit
-              =link_to edit_restaurant_path, class: "show-link" do
+              = link_to edit_restaurant_path, class: "show-link" do
                 .restaurant-info__action__btns__edit--text
                   編集する
             .restaurant-info__action__btns__delete
@@ -102,7 +102,6 @@
                 .restaurant-info__action__btns__delete--text
                   削除する
         - else
-          
       - else
     
     -# メニュー一覧表示部分
