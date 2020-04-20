@@ -10,37 +10,36 @@
     
     -# 画像表示部分
     .menu-info__photos
-      .menu-info__photos__section
-        .menu-info__photos__section--caption
-          ・メニュー画像
-        .menu-info__photos__section--main
-          - if @menu.photo.present?
-            = image_tag "#{@menu.photo}", class: "main-view", width: "350px", height: "200px"
-          - else
-            = image_tag "nodata.jpg", class: "main-view", width: "350px", height: "200px"
+      .menu-info__photos--caption
+        ・メニュー画像
+      .menu-info__photos--main
+        - if @menu.photo.present?
+          = image_tag "#{@menu.photo}", class: "main-view", width: "400px", height: "250px"
+        - else
+          = image_tag "nodata.jpg", class: "main-view", width: "400px", height: "250px"
     
     -# 価格表示部分
     .menu-info__price
       .menu-info__price--caption
         ・メニュー価格
-        .menu-info__price--namber
-          = @menu.price
-          円
+      .menu-info__price--number
+        = @menu.price
+        円
     
     -# レビュー表示部分
-    .menu-info__recomend
+    .menu-info__recommend
       - if @menu.detail.present?
-        .manu-info__recommend--caption
+        .menu-info__recommend--caption
           ・おすすめポイント
         .menu-info__recommend__textbox
-          .emnu-info__recommend__textbox--detail
+          .menu-info__recommend__textbox--detail
             = @menu.detail
     
     -# ボタン部分
     .menu-info__action
       - if user_signed_in?
         - if @menu.user_id == current_user.id
-          .menu-info_action__btns
+          .menu-info__action__btns
             .menu-info__action__btns__edit
               = link_to "#", class: "show-link" do
                 .menu-info__action__btns__edit--text
