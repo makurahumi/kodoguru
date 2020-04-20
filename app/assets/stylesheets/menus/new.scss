@@ -67,8 +67,20 @@
       background-color: $basic-gray;
     }
 
+    #photo-field{
+      margin: 0 auto;
+      height: 300px;
+      width: 600px;
+      background-color: $basic-gray;
+      border: 1px solid black;
+    }
+
     #photo-preview {
-      padding-left: 25px;
+      padding: 25px;
+    }
+    
+    .js-file__menu{
+      display: none;
     }
   }
 
