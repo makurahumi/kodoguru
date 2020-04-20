@@ -59,7 +59,7 @@
               %th 定休日
               %td.restaurant-info__exibition__box--content
                 = @restaurant.holiday
-          -# %tr
+          -# %tr 評価部分は未実装のため、コメントアウト中
           -#   %th 評価
           -#   %td.restaurant-info__exibition__box--content
           %tr
@@ -101,22 +101,9 @@
               = link_to restaurant_path(@restaurant), class: "show-link", method: :delete do
                 .restaurant-info__action__btns__delete--text
                   削除する
-            .restaurant-info__action__btns__return
-              = link_to root_path, class: "show-link" do
-                .restaurant-info__action__btns__return--text
-                  戻る
         - else
-          .restaurant-info__action__btns
-            .restaurant-info__action__btns__return
-              = link_to root_path, class: "show-link" do
-                .restaurant-info__action__btns__return--text
-                  戻る
+          
       - else
-        .restaurant-info__action__btns
-          .restaurant-info__action__btns__return
-            = link_to root_path, class: "show-link" do
-              .restaurant-info__action__btns__return--text
-                戻る
     
     -# メニュー一覧表示部分
     .restaurant-info__menus
@@ -134,9 +121,9 @@
       -# メニュー投稿・戻るボタン部分
       .restaurant-info__menus__btns
         - if user_signed_in?
-          - if @restaurant.user_id = current_user.id
+          - if @restaurant.user_id == current_user.id
             .restaurant-info__menus__btns__post
-              =link_to "#", class: "show-link" do
+              =link_to new_restaurant_menu_path(@restaurant), class: "show-link" do
                 .restaurant-info__menus__btns__post--text
                   メニューを投稿する
             .restaurant-info__menus__btns__return

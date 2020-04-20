@@ -125,10 +125,10 @@
 
   // 編集・削除・戻るボタン部分
   &__action {
-    padding: 10px 0;
     @include body-bottom-solid;
 
     &__btns {
+      padding: 10px 0;
 
       &__edit {
         @include show-page-btns;

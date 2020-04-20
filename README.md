@@ -82,7 +82,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|string||
-|restaurant_id|integer|null: false, foreign_key: true|
+|restaurant_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :restaurant
@@ -90,11 +90,12 @@
 ### menusテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|menuname|string|null: false|
 |photo|string||
 |price|integer|null: false|
 |detail|string||
-|restaurant_id|integer|null: false, foreign_key: true|
+|restaurant_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: ture|
 
 ### Association
 - belongs_to :restaurant
