@@ -1,0 +1,114 @@
+// メニュー詳細表示背景
+.menu-show {
+  background-color: wheat;
+  padding: 15px 0 25px 0;
+}
+
+// メニュー詳細表示情報記載部分全体
+.menu-info {
+  width: 800px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 10px 0;
+
+  // リンク文字用
+  .show-link {
+    @include top-link-caption;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $basic-gray;
+
+    &--name {
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+
+  // 画像表示部分
+  &__photos {
+    padding: 10px;
+    @include body-bottom-solid;
+
+    &--caption {
+      @include show-caption;
+      padding: 0 0 20px 30px;
+    }
+
+    &--main {
+      text-align: center;
+    }
+
+    .main-view {
+      border: 3px solid $basic-gray;
+      box-shadow: 1px 1px 10px;
+    }
+  }
+
+  &__price {
+    padding: 10px 20px;
+    display: flex;
+
+    &--caption {
+      @include show-caption;
+      padding: 10px 0 10px 20px;
+    }
+
+    &--number {
+      margin-left: 50px;
+      font-size: 35px;
+    }
+  }
+
+  &__recommend {
+    padding: 10px 20px;
+    @include body-bottom-solid;
+
+    &--caption {
+      @include show-caption;
+      padding: 10px 0 10px 20px;
+    }
+
+    &__textbox {
+      width: 600px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      border: solid $basic-gray;
+      box-shadow: 1px 1px 4px;
+
+      &--detail {
+        font-size: 20px;
+        padding: 10px;
+      }
+    }
+  }
+
+  &__action {
+
+    &__btns {
+      padding: 10px 0;
+
+      &__edit {
+        @include show-page-btns;
+        border: 2px solid orangered;
+        background-color: orangered;
+      }
+
+      &__delete {
+        @include show-page-btns;
+        border: 2px solid gray;
+        background-color: gray;
+        margin-top: 10px;
+      }
+
+      &__return {
+        @include show-page-btns;
+        border: 2px solid $basic-gray;
+        background-color: $basic-gray;
+        margin-top: 10px;
+      }
+    }
+  }
+}

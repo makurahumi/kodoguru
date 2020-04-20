@@ -141,14 +141,6 @@
         border: 2px solid gray;
         background-color: gray;
         margin-top: 10px;
-        color: white;
-      }
-
-      &__return {
-        @include show-page-btns;
-        border: 2px solid $basic-gray;
-        background-color: $basic-gray;
-        margin-top: 10px;
       }
     }
   }

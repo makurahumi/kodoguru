@@ -1,0 +1,67 @@
+-# ヘッダー部分
+= render partial: "shared/header"
+
+-# ページ全体・タイトル部分
+.menu-show
+  .menu-info
+    .menu-info__title
+      .menu-info__title--name
+        = @menu.menuname
+    
+    -# 画像表示部分
+    .menu-info__photos
+      .menu-info__photos--caption
+        ・メニュー画像
+      .menu-info__photos--main
+        - if @menu.photo.present?
+          = image_tag "#{@menu.photo}", class: "main-view", width: "400px", height: "250px"
+        - else
+          = image_tag "nodata.jpg", class: "main-view", width: "400px", height: "250px"
+    
+    -# 価格表示部分
+    .menu-info__price
+      .menu-info__price--caption
+        ・メニュー価格
+      .menu-info__price--number
+        = @menu.price
+        円
+    
+    -# レビュー表示部分
+    .menu-info__recommend
+      - if @menu.detail.present?
+        .menu-info__recommend--caption
+          ・おすすめポイント
+        .menu-info__recommend__textbox
+          .menu-info__recommend__textbox--detail
+            = @menu.detail
+    
+    -# ボタン部分
+    .menu-info__action
+      - if user_signed_in?
+        - if @menu.user_id == current_user.id
+          .menu-info__action__btns
+            .menu-info__action__btns__edit
+              = link_to "#", class: "show-link" do
+                .menu-info__action__btns__edit--text
+                  編集する
+            .menu-info__action__btns__delete
+              = link_to "#", class: "show-link" do
+                .menu-info__action__btns__delete--text
+                  削除する
+            .menu-info__action__btns__return
+              = link_to root_path, class: "show-link" do
+                .menu-info__action__btns__return--text
+                  戻る
+        - else
+          .menu-info__action__btns__return
+            = link_to root_path, class: "show-link" do
+              .menu-info__action__btns__return--text
+                戻る
+      - else
+        .menu-info__action__btns__return
+          = link_to root_path, class: "show-link" do
+            .menu-info__action__btns__return--text
+              戻る
+
+-# フッター部分
+= render partial: "shared/footer"
