@@ -90,12 +90,6 @@
     &__btns {
       padding: 10px 0;
 
-      &__edit {
-        @include show-page-btns;
-        border: 2px solid orangered;
-        background-color: orangered;
-      }
-
       &__delete {
         @include show-page-btns;
         border: 2px solid gray;

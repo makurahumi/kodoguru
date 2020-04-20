@@ -40,10 +40,6 @@
       - if user_signed_in?
         - if @menu.user_id == current_user.id
           .menu-info__action__btns
-            .menu-info__action__btns__edit
-              = link_to "#", class: "show-link" do
-                .menu-info__action__btns__edit--text
-                  編集する
             .menu-info__action__btns__delete
               = link_to "#", class: "show-link" do
                 .menu-info__action__btns__delete--text
