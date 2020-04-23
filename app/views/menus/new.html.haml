@@ -8,7 +8,7 @@
       .menu-form__title
         メニュー情報入力
     .menu-input
-      = form_with model: @menu, url: restaurants_menus_create_restaurant_menus_path ,mehtod: :post, action: :create, local: true do |f|
+      = form_with model: [@restaurant, @menu], url: restaurant_menus_path ,mehtod: :post, action: :create, local: true do |f|
 
         -# 画像投稿部分
         .menu-input__photobox

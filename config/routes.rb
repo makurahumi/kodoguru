@@ -4,11 +4,8 @@ Rails.application.routes.draw do
   
   root "restaurants#index"
   resources :restaurants do
-    resources :menus do
-      collection do
-        post "/restaurants/menus/create", to: "menus#create"
-    end
+    resources :menus, shallow: true
   end
-end
+
   resources :users, only: [:show, :edit, :update]
 end
