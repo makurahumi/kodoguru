@@ -15,7 +15,6 @@ class MenusController < ApplicationController
   end
 
   def show
-    
   end
 
   def destroy
