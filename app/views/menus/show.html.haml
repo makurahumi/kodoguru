@@ -41,7 +41,7 @@
         - if @menu.user_id == current_user.id
           .menu-info__action__btns
             .menu-info__action__btns__delete
-              = link_to "#", class: "show-link" do
+              = link_to menu_path(@menu.id), class: "show-link", method: :delete do
                 .menu-info__action__btns__delete--text
                   削除する
             .menu-info__action__btns__return
