@@ -175,6 +175,28 @@
       &__index {
         padding: 10px 0;
       }
+
+      &__paginations {
+        padding-top: 10px;
+        font-size: 25px;
+      }
+
+      .pagination {
+        text-align: center;
+      }
+
+      &__nodata {
+        height: 55px;
+        width: 550px;
+        background-color: palevioletred;
+        margin: 170px 0 0 25px;
+
+        &--text {
+          color: white;
+          font-size: 35px;
+          text-align: center;
+        }
+      }
     }
 
     // メニュー用ボタン部分

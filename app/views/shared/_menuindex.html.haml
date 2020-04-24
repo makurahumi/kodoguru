@@ -1,10 +1,13 @@
 .menu-box
-  = link_to menu_path(menu_url=2) do
+  = link_to menu_path(menu.id) do
     .menu-box__contents
       .menu-box__contents--photo
-        = image_tag "nodata.jpg", width: "150px", height: "100px", class: "menu-photo"
+        - if menu.photo.present?
+          = image_tag "#{menu.photo}", width: "150px", height: "100px", class: "menu-photo"
+        - else
+          = image_tag "nodata.jpg",  width: "150px", height: "100px", class: "menu-photo"
       .menu-box__contents__detail
         .menu-box__contents__detail--name
-          生姜焼き定食
+          #{menu.menuname}
         .menu-box__contents__detail--price
-          1990円
+          #{menu.price}円
