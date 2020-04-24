@@ -113,9 +113,15 @@
           .restaurant-info__menus__box__title--text
             メニュー
         .restaurant-info__menus__box__index
-          = render partial: "shared/menuindex"
-          = render partial: "shared/menuindex"
-          = render partial: "shared/menuindex"
+          - if @menus.present?
+            - @menus.each do |menu|
+              = render partial: "shared/menuindex", locals: {menu: menu}
+            .restaurant-info__menus__box__paginations
+              = paginate(@menus)
+          - else
+            .restaurant-info__menus__box__nodata
+              .restaurant-info__menus__box__nodata--text
+                投稿がありません
 
       -# メニュー投稿・戻るボタン部分
       .restaurant-info__menus__btns
