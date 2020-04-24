@@ -20,6 +20,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    @menus = Menu.where(restaurant_id: @restaurant).page(params[:page]).per(3).order("created_at DESC")
   end
 
   def edit
