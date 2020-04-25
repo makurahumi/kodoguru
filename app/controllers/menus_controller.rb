@@ -8,8 +8,9 @@ class MenusController < ApplicationController
   def create
     @menu = Menu.new(menu_params)
     if @menu.save
-      redirect_to root_path
+      redirect_to root_path, notice: "メニューを投稿しました。"
     else
+      flash.now[:alert] = "必須項目を全て入力してください。"
       render :new
     end
   end
