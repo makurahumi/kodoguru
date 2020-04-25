@@ -12,31 +12,31 @@ RSpec.describe Restaurant, type: :model do
     it "nameが空の場合は投稿不可" do
       restaurant = build(:restaurant, name: "")
       restaurant.valid?
-      expect(restaurant.errors[:name]).to include("can't be blank")
+      expect(restaurant.errors[:name]).to include("を入力してください")
     end
 
     it "cuisine_idが空の場合は投稿不可" do
       restaurant = build(:restaurant, cuisine_id: "")
       restaurant.valid?
-      expect(restaurant.errors[:cuisine_id]).to include("can't be blank")
+      expect(restaurant.errors[:cuisine_id]).to include("を入力してください")
     end
 
     it "form_idが空の場合は投稿不可" do
       restaurant = build(:restaurant, form_id: "")
       restaurant.valid?
-      expect(restaurant.errors[:form_id]).to include("can't be blank")
+      expect(restaurant.errors[:form_id]).to include("を入力してください")
     end
 
     it "prefecture_idが空の場合は投稿不可" do
       restaurant = build(:restaurant, prefecture_id: "")
       restaurant.valid?
-      expect(restaurant.errors[:prefecture_id]).to include("can't be blank")
+      expect(restaurant.errors[:prefecture_id]).to include("を入力してください")
     end
 
     it "cityが空の場合は投稿不可" do
       restaurant = build(:restaurant, city: "")
       restaurant.valid?
-      expect(restaurant.errors[:city]).to include("can't be blank")
+      expect(restaurant.errors[:city]).to include("を入力してください")
     end
 
   # 任意部分が空の場合
