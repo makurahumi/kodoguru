@@ -20,9 +20,9 @@ class MenusController < ApplicationController
 
   def destroy
     if @menu.destroy
-      redirect_to root_path
+      redirect_to root_path, notice: "メニューを削除しました。"
     else
-      redirect_to menu_path
+      redirect_to menu_path, alert: "メニューの削除に失敗しました。"
     end
   end
 
