@@ -2,6 +2,7 @@ require 'rails_helper'
 
   describe User do
     describe '#create' do
+    # 全て入力した場合
       it "全て入力すれば登録可能" do
         user = build(:user)
         expect(user).to be_valid

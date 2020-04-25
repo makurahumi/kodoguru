@@ -1,16 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe Menu, type: :model do
-  before do
-    @user = FactoryBot.create(:user)
-    @restaurant = FactoryBot.create(:restaurant)
-  end
+  # 仮データを読み込み
+    before do
+      @user = FactoryBot.create(:user)
+      @restaurant = FactoryBot.create(:restaurant)
+    end
 
   describe '#create' do
-    it "全て入力すれば投稿可" do
-      menu = build(:menu)
-      expect(menu).to be_valid
-    end
+    # 全て入力した場合
+      it "全て入力すれば投稿可" do
+        menu = build(:menu)
+        expect(menu).to be_valid
+      end
 
     # 必須項目が空の場合
       it "menunameが空の場合は投稿不可" do
