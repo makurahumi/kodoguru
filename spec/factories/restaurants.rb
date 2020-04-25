@@ -1,6 +1,7 @@
 FactoryBot.define do
 
   factory :restaurant do
+    id            { "1" }
     name          { "ニャンコ屋" }
     cuisine_id    { "1" }
     form_id       { "テイクアウトのみ" }
