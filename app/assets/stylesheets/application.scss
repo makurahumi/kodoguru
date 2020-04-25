@@ -3,10 +3,11 @@
 @import "./reset";
 @import "./configs/variabel";
 @import "./mixins/mixin";
-@import "./devise/new_account";
-@import "./devise/login";
-@import "./devise/links";
-@import "./devise/edit";
+@import "./devises/error";
+@import "./devises/new_account";
+@import "./devises/login";
+@import "./devises/links";
+@import "./devises/edit";
 @import "./menus/new";
 @import "./menus/show";
 @import "./modules/flash";
