@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only:[:show, :edit, :update, :destroy]
+  before_action :move_to_top, except:[:index, :show]
 
   def index
     @restaurants = Restaurant.includes(:images).page(params[:page]).per(5).order("created_at DESC")
@@ -51,5 +52,9 @@ class RestaurantsController < ApplicationController
 
     def set_restaurant
       @restaurant = Restaurant.find(params[:id])
+    end
+
+    def move_to_top
+      redirect_to root_path unless user_signed_in?
     end
 end
