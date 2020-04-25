@@ -37,9 +37,9 @@ class RestaurantsController < ApplicationController
 
   def destroy
       if @restaurant.destroy
-        redirect_to root_path
+        redirect_to root_path, notice: "お店の情報を削除しました。"
       else
-        redirect_to restaurant_path
+        redirect_to restaurant_path, alert: "削除に失敗しました。"
       end
   end
 
