@@ -13,9 +13,9 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
-      redirect_to root_path, notice: "お店の情報が投稿されました"
+      redirect_to root_path, notice: "お店の情報が投稿されました。"
     else
-      redirect_to new_restaurant_path, alert: "投稿に失敗しました。必須項目を全て入力してください"
+      redirect_to new_restaurant_path, alert: "投稿に失敗しました。必須項目を全て入力してください。"
     end
   end
 
@@ -28,8 +28,9 @@ class RestaurantsController < ApplicationController
 
   def update
     if @restaurant.update(restaurant_params)
-      redirect_to restaurant_path
+      redirect_to restaurant_path, notice: "お店の情報を更新しました。"
     else
+      flash.now[:alert] = "必須項目を全て入力してください"
       render :edit
     end
   end
