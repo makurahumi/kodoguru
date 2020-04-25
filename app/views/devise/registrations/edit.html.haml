@@ -1,6 +1,6 @@
-= render partial: "shared/header"
 = render "devise/shared/error_messages", resource: resource
 
+-# アカウント情報変更タイトル部分
 .edit
   .edit__box
     .edit__box__caption
@@ -12,9 +12,10 @@
         Cancel my account
         %p
         Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-        .edit__box__caption__extra--return
-          = link_to "Back", :back
+        -# .edit__box__caption__extra--return
+        -#   = link_to "Back", :back
 
+    -# アカウント情報変更入力部分
     .edit__box__form
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
         

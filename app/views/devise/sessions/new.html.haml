@@ -1,5 +1,4 @@
-= render partial: "shared/header" 
-
+-# ログインタイトル部分
 .login
   .login__box
     .login__box__caption
@@ -13,6 +12,7 @@
         .login__box__caption__signup--link
           = render "devise/shared/links"
 
+    -# ログイン情報入力部分
     .login__box__form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
 
