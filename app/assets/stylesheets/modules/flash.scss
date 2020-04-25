@@ -6,8 +6,6 @@
   }
 
   .alert {
-    background-color: orangered;
-    color: white;
-    text-align: center;
+    @include alert-box;
   }
 }

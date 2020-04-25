@@ -194,3 +194,10 @@
   text-align: center;
   border-radius: 4px;
 }
+
+// エラーメッセージ用背景
+@mixin alert-box {
+  background-color: orangered;
+  color: white;
+  text-align: center;
+}
