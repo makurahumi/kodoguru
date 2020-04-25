@@ -1,5 +1,6 @@
-= render partial: "shared/header"
+= render "devise/shared/error_messages", resource: resource
 
+-# サインアップタイトル部分
 .signup
   .signup__box
     .signup__box__caption
@@ -13,10 +14,9 @@
         .signup__box__caption__login--link
           = render "devise/shared/links"
       
-    
+    -# サインアップ情報入力部分
     .signup__box__form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        = render "devise/shared/error_messages", resource: resource
 
         .signup__box__form--field
           = f.label :nickname, "ニックネーム", class: "field-name"

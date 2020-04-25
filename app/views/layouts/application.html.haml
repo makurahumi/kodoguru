@@ -8,4 +8,10 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   %body
+    -# ヘッダー部分
+    = render partial: "shared/header"
+
+    -# Flashメッセージ部分
+    = render partial: 'layouts/notifications'
+    
     = yield
