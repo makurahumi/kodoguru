@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
+  before_action :authenticate_user!, only:[:new, :create, :edit, :destroy]
   before_action :set_menu, only:[:show, :destroy]
-  before_action :move_to_top, except:[:show]
 
   def new
     @menu = Menu.new
@@ -35,9 +35,5 @@ class MenusController < ApplicationController
 
     def set_menu
       @menu = Menu.find(params[:id])
-    end
-
-    def move_to_top
-      redirect_to root_path unless user_signed_in?
     end
 end
