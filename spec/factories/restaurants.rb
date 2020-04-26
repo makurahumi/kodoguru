@@ -1,6 +1,8 @@
 FactoryBot.define do
 
   factory :restaurant do
+    # コントローラーのテストを行う場合はidをコメントアウト
+    # id            { "1" }
     name          { "ニャンコ屋" }
     cuisine_id    { "1" }
     form_id       { "テイクアウトのみ" }
@@ -14,5 +16,6 @@ FactoryBot.define do
     open          { "11:00" }
     closed        { "19:00" }
     user_id       { "1" }
+    created_at    { Faker::Time.between(from: DateTime.now - 2, to: DateTime.now) }
   end
 end
