@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: kodoguru_production
   username: kodoguru
   password: <%= ENV['KODOGURU_DATABASE_PASSWORD'] %>
