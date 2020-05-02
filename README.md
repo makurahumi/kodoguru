@@ -33,8 +33,17 @@ https://gurumemo.herokuapp.com/
 * deviseの新規登録画面をカスタマイズ。
 <img width="1059" alt="92d4ccc7e2a99ce9338d49ecd1ea61b6" src="https://user-images.githubusercontent.com/55948480/80858264-56a5a980-8c93-11ea-9fd6-5b32f5d9a553.png">
 
-* エラーメッセージ表示
+* エラーメッセージ表示。
 ![d8dd693d1060613a846bb5d386994d09](https://user-images.githubusercontent.com/55948480/80858946-0ed55100-8c98-11ea-994a-1aa351c3dada.gif)
+
+### ログインページ
+* トップページログインボタンから遷移。
+* deviseのログイン画面をカスタマイズ。
+<img width="1061" alt="df9de4b50cd59eb4e7771cc138afffae" src="https://user-images.githubusercontent.com/55948480/80859570-f74c9700-8c9c-11ea-9517-c38c921650ca.png">
+
+* エラーメッセージ表示。
+![3e6421d19e235539170b4985da36d792](https://user-images.githubusercontent.com/55948480/80859631-4c88a880-8c9d-11ea-9de7-bc8bbdd1687b.gif)
+
 
 
 ## 使用技術
