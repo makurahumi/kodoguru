@@ -33,6 +33,10 @@ https://gurumemo.herokuapp.com/
 * deviseの新規登録画面をカスタマイズ。
 <img width="1059" alt="92d4ccc7e2a99ce9338d49ecd1ea61b6" src="https://user-images.githubusercontent.com/55948480/80858264-56a5a980-8c93-11ea-9fd6-5b32f5d9a553.png">
 
+* エラーメッセージ表示
+![d8dd693d1060613a846bb5d386994d09](https://user-images.githubusercontent.com/55948480/80858946-0ed55100-8c98-11ea-994a-1aa351c3dada.gif)
+
+
 ## 使用技術
 * Rubyバージョン: 2.5.1
 * Railsバージョン: 5.2.4.1
