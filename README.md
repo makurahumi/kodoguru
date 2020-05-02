@@ -15,7 +15,7 @@
 ユーザー側に寄り添える簡易グルメレビューサービスを作ってみたいと思い、開発しました。
 
 ## リンク
-準備中
+https://gurumemo.herokuapp.com/
 
 ## テストユーザー
 準備中
@@ -24,24 +24,26 @@
 準備中
 
 ## 使用技術
-* Ruby version: 2.5.1
-* Rails version: 5.2.4.1
+* Rubyバージョン: 2.5.1
+* Railsバージョン: 5.2.4.1
 
-* System dependencies
+* デプロイ: heroku
+* 画像保存: AWS-S3
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用Gem
+### フロントエンド系
+* erb2haml
+* haml-rails
+* jquery-rails
+* font-awesome-sass
+* font-awesome-rails
+* kaminari
+### バックエンド系
+* devise
+* mini_magick
+* carrierwave
+* pry-rails
+* active_hash
 
 ## DB設計
 ### Usersテーブル
