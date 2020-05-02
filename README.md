@@ -31,6 +31,7 @@ https://gurumemo.herokuapp.com/
 ### 新規登録ページ
 * トップページ新規登録ボタンから遷移。
 * deviseの新規登録画面をカスタマイズ。
+* ニックネーム、Eメールアドレス、パスワードを入力しアカウントを作成する。
 <img width="1059" alt="92d4ccc7e2a99ce9338d49ecd1ea61b6" src="https://user-images.githubusercontent.com/55948480/80858264-56a5a980-8c93-11ea-9fd6-5b32f5d9a553.png">
 
 * エラーメッセージ表示。
@@ -39,11 +40,26 @@ https://gurumemo.herokuapp.com/
 ### ログインページ
 * トップページログインボタンから遷移。
 * deviseのログイン画面をカスタマイズ。
+* Eメールアドレス、パスワードを入力しログインする。
 <img width="1061" alt="df9de4b50cd59eb4e7771cc138afffae" src="https://user-images.githubusercontent.com/55948480/80859570-f74c9700-8c9c-11ea-9517-c38c921650ca.png">
 
 * エラーメッセージ表示。
 ![3e6421d19e235539170b4985da36d792](https://user-images.githubusercontent.com/55948480/80859631-4c88a880-8c9d-11ea-9de7-bc8bbdd1687b.gif)
 
+### マイページ画面
+* ログイン後、マイページボタンから遷移。
+
+### ニックネーム変更画面
+* マイページ、ニックネーム変更ボタンから遷移。
+* ニックネームを変更できる。
+<img width="1067" alt="226908d1bfe10373b333d6a0c100d35b" src="https://user-images.githubusercontent.com/55948480/80859899-10564780-8c9f-11ea-8cb6-b08a4a083a7b.png">
+
+* エラーメッセージ表示
+![cb42818d9bf9dc99ea276ccd1c5b5e5b](https://user-images.githubusercontent.com/55948480/80860039-244e7900-8ca0-11ea-99f6-97ef1ed12946.gif)
+
+### ユーザー情報変更画面
+* マイページ、ユーザー情報変更ボタンから遷移。
+* Eメールアドレス、パスワードを変更できる。
 
 
 ## 使用技術
