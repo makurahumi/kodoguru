@@ -24,6 +24,10 @@ https://gurumemo.herokuapp.com/
 ### トップページ
 * ログインしなくても全てのユーザーが投稿した店舗情報のサムネイルが表示されます。
 <!-- トップページ写真 -->
+![cedb8e0506726656ea06e9bc3d165088](https://user-images.githubusercontent.com/55948480/80899097-dccef800-8d46-11ea-9cc6-93e5492b65b9.jpg)
+![aa829b9c2777d08c9ce0e56b15382a8e](https://user-images.githubusercontent.com/55948480/80899107-fb34f380-8d46-11ea-9b68-c3b0e973a9f3.jpg)
+<img width="1028" alt="0b2ef5b556623b7a9eeb5eae6758552b" src="https://user-images.githubusercontent.com/55948480/80899109-0556f200-8d47-11ea-9c47-0ef72f12b0ce.png">
+
 * ログインの有無によって、ボタン部分をif文で分岐処理しています。
 * 非ログイン時は、新規登録ボタンとログインボタンを表示しています。
 <!-- 非ログイン時ボタン部分写真 -->
@@ -35,6 +39,7 @@ https://gurumemo.herokuapp.com/
 
 * gem kaminariでページネーションを実装しています。
 <!-- kaminariページネーション部分写真 -->
+<img width="1058" alt="56b9f6b06a4311044446e4b0cc69a453" src="https://user-images.githubusercontent.com/55948480/80899058-55818480-8d46-11ea-814f-b24c12a7092f.png">
 
 ### 新規登録ページ
 * トップページ新規登録ボタンから遷移します。
@@ -84,7 +89,6 @@ https://gurumemo.herokuapp.com/
 <img width="1064" alt="30b68ca3efa9a32b5d74dea9117dcd01" src="https://user-images.githubusercontent.com/55948480/80897161-ee0d0a00-8d30-11ea-84ec-60d3192eb391.png">
 <img width="1070" alt="6721becb929eaaed46ff9ea44f67aa82" src="https://user-images.githubusercontent.com/55948480/80897166-f9f8cc00-8d30-11ea-9a21-3568ee18f40c.png">
 
-
 * メニュー情報がある場合とない場合で表示が変化するようif文で分岐しています。
 * メニュー情報ある場合、最大3件を表示しkaminariのページネーションで遷移できるようにしています。
 <!-- メニュー情報が複数ある場合GIF -->
@@ -100,7 +104,6 @@ https://gurumemo.herokuapp.com/
 
 <!-- メニュー投稿部分写真 -->
 <img width="970" alt="028dda858c1033cb6a737b2608f81fe3" src="https://user-images.githubusercontent.com/55948480/80897232-b488ce80-8d31-11ea-9d9a-356d0f62da99.png">
-
 
 ### 店舗情報編集ページ
 * お店の情報を投稿したユーザーがログインした場合、店舗情報表示ページの編集するボタンから遷移します。
@@ -124,7 +127,6 @@ https://gurumemo.herokuapp.com/
 <!-- 店舗情報削除機能GIF -->
 ![b788391e100c90156ae3459ec8e528a2](https://user-images.githubusercontent.com/55948480/80897941-f5381600-8d38-11ea-8bb1-80c187b54875.gif)
 
-
 ### メニュー投稿ページ
 * 店舗情報を投稿したユーザーのみ、メニュー投稿ボタンから遷移します。
 * 画像投稿、メニュー名、値段、テキスト投稿を実装しています。
@@ -146,7 +148,6 @@ https://gurumemo.herokuapp.com/
 * 投稿したユーザーがログインしている場合、削除ボタンが表示されます。
 <!-- メニュー情報表示ページボタン部分写真 -->
 <img width="1055" alt="3090e7a22aff9841ed47cfc7ec263fbc" src="https://user-images.githubusercontent.com/55948480/80897653-fe73b380-8d35-11ea-87e9-2b937b3929c0.png">
-
 
 ### メニュー情報削除機能
 * メニュー情報を投稿したユーザーがログインしている場合、メニュー情報表示ページの削除ボタンで機能します。
@@ -187,7 +188,6 @@ https://gurumemo.herokuapp.com/
 * マイページ、ログアウトボタンからログアウトできます。
 <!-- ログアウトGIF -->
 ![e66d8db0f6311f0aad2ddf9e41d61625](https://user-images.githubusercontent.com/55948480/80897452-b6539180-8d33-11ea-841f-f5cb2d800e09.gif)
-
 
 ## 使用技術
 * Rubyバージョン: 2.5.1
