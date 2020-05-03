@@ -106,12 +106,24 @@ https://gurumemo.herokuapp.com/
 * お店の情報を投稿したユーザーがログインした場合、店舗情報表示ページの編集するボタンから遷移します。
 * お店の情報、画像を変更することができます。
 <!-- 店舗情報編集ページ写真 -->
+<img width="1063" alt="e287ca38b3c9d514ed44d2989328095c" src="https://user-images.githubusercontent.com/55948480/80897838-ff0d4980-8d37-11ea-8fd7-a989ae0a2010.png">
+<img width="1065" alt="eb185bb1251ef8513837f693a159fe82" src="https://user-images.githubusercontent.com/55948480/80897848-0e8c9280-8d38-11ea-87a9-41df5f4288d4.png">
+<img width="1061" alt="52af3035bdf01e3ec5481744f98e0425" src="https://user-images.githubusercontent.com/55948480/80897855-1ba98180-8d38-11ea-9a91-3b0529b3be30.png">
+
+* 画像投稿部分は画像の変更と追加ができます。
 <!-- 画像投稿部分GIF -->
+![84b82190c8c06ec59b59cf7e51ff7270](https://user-images.githubusercontent.com/55948480/80897858-2bc16100-8d38-11ea-81d3-e3215b9e0805.gif)
+
+* 変更後画像
+<!-- 画像追加変更後画像 -->
+<img width="1057" alt="b4f11da60da8ff73cff8082b61c89c6e" src="https://user-images.githubusercontent.com/55948480/80897882-6e833900-8d38-11ea-9a62-c281ed686209.png">
 
 ### 店舗情報削除機能
 * 投稿ユーザーがログインしている場合、店舗情報表示ページの削除ボタンで機能します。
 * 店舗情報に紐づいた、画像情報、メニュー情報全てを削除できます。
 <!-- 店舗情報削除機能GIF -->
+![b788391e100c90156ae3459ec8e528a2](https://user-images.githubusercontent.com/55948480/80897941-f5381600-8d38-11ea-8bb1-80c187b54875.gif)
+
 
 ### メニュー投稿ページ
 * 店舗情報を投稿したユーザーのみ、メニュー投稿ボタンから遷移します。
@@ -159,7 +171,7 @@ https://gurumemo.herokuapp.com/
 
 * エラーメッセージ表示
 <!-- ニックネーム変更ページエラーメッセージGIF -->
-![cb42818d9bf9dc99ea276ccd1c5b5e5b](https://user-images.githubusercontent.com/55948480/80860039-244e7900-8ca0-11ea-99f6-97ef1ed12946.gif)
+![81c89c1db37d12ff286d8b4f71f199af](https://user-images.githubusercontent.com/55948480/80897755-47783780-8d37-11ea-9551-f9e8f12533d4.gif)
 
 ### ユーザー情報変更ページ
 * マイページ、ユーザー情報変更ボタンから遷移します。
