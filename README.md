@@ -18,7 +18,8 @@
 https://gurumemo.herokuapp.com/
 
 ## テストユーザー
-準備中
+メールアドレス: test-user@gmail.com
+パスワード: test1user
 
 ## デモ
 ### トップページ
