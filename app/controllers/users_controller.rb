@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if current_user.update(user_params)
       redirect_to root_path, notice: "ニックネームを変更しました。"
     else
-      flash.now[:alert] = "ニックネームを入力してください。"
+      flash.now[:alert] = "10文字以内でニックネームを入力してください。"
       render :edit
     end
   end
