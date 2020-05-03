@@ -6,6 +6,7 @@
   border: 2px solid cornflowerblue;
   margin-bottom: 10px;
   
+  
   &__contents {
     padding: 10px;
 
@@ -23,13 +24,17 @@
       color: black;
 
       &--name {
-        font-size: 40px;
-        margin-right: 80px;
+        width: 350px;
+        font-size: 35px;
+        margin-right: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
 
       &--price {
         font-size: 30px;
-        margin-left: 170px;
+        margin-left: 200px;
       }
     }
   }
