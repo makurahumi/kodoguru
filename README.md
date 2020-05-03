@@ -27,8 +27,12 @@ https://gurumemo.herokuapp.com/
 * ログインの有無によって、ボタン部分をif文で分岐処理しています。
 * 非ログイン時は、新規登録ボタンとログインボタンを表示しています。
 <!-- 非ログイン時ボタン部分写真 -->
+<img width="1066" alt="577e819cf8009e4e5486a1bb424961ac" src="https://user-images.githubusercontent.com/55948480/80897510-688b5900-8d34-11ea-9170-29aaf16d9749.png">
+
 * ログイン時には、店舗情報投稿ボタンとマイページボタンを表示しています。
 <!-- ログイン時ボタン部分写真 -->
+<img width="1065" alt="072287b7ab61ce0f6c072ccc16e7ebdb" src="https://user-images.githubusercontent.com/55948480/80897529-96709d80-8d34-11ea-8703-93e00e0179be.png">
+
 * gem kaminariでページネーションを実装しています。
 <!-- kaminariページネーション部分写真 -->
 
@@ -109,13 +113,19 @@ https://gurumemo.herokuapp.com/
 * 店舗情報に紐づいた、画像情報、メニュー情報全てを削除できます。
 <!-- 店舗情報削除機能GIF -->
 
-## メニュー投稿ページ
+### メニュー投稿ページ
 * 店舗情報を投稿したユーザーのみ、メニュー投稿ボタンから遷移します。
 * 画像投稿、メニュー名、値段、テキスト投稿を実装しています。
 * 画像投稿にはJavaScriptを使用し、プレビュー表示を実装しています。
 <!-- メニュー投稿ページ写真 -->
+<img width="1061" alt="86aa87f3365b0392af61bc88729ff8bc" src="https://user-images.githubusercontent.com/55948480/80897579-29113c80-8d35-11ea-8e89-c6c64b1eb9c8.png">
+<img width="1062" alt="b7736e3558b8f712c8ebad79230013db" src="https://user-images.githubusercontent.com/55948480/80897593-45ad7480-8d35-11ea-9dd0-c0e06abb7253.png">
 
-## メニュー情報表示ページ
+* エラーメッセージ表示
+<!-- メニュー投稿ページエラーメッセージGIF -->
+![908a6d1b4ba89fa406ab0db620d9323b](https://user-images.githubusercontent.com/55948480/80897607-6f669b80-8d35-11ea-899c-29a4220b5f50.gif)
+
+### メニュー情報表示ページ
 * ログイン、非ログインに関わらず店舗情報表示ページ内のメニュー一覧表示から遷移します。
 * 投稿されたメニューの情報が表示されます。
 <!-- メニュー情報表示ページ写真 -->
@@ -123,17 +133,23 @@ https://gurumemo.herokuapp.com/
 
 * 投稿したユーザーがログインしている場合、削除ボタンが表示されます。
 <!-- メニュー情報表示ページボタン部分写真 -->
+<img width="1055" alt="3090e7a22aff9841ed47cfc7ec263fbc" src="https://user-images.githubusercontent.com/55948480/80897653-fe73b380-8d35-11ea-87e9-2b937b3929c0.png">
 
-## メニュー情報削除機
+
+### メニュー情報削除機能
 * メニュー情報を投稿したユーザーがログインしている場合、メニュー情報表示ページの削除ボタンで機能します。
 * メニュー情報を削除できます。
 <!-- メニュー情報削除機能GIF -->
+![e8767784aba706964f869a3a67830530](https://user-images.githubusercontent.com/55948480/80897635-ccfae800-8d35-11ea-961d-66298d9fbf5d.gif)
 
 ### マイページ
 * ログイン後、マイページボタンから遷移します。
 * 画面左側に、ニックネーム変更ボタン、ユーザー情報変更ボタン、ログアウトボタンが表示されます。
-* 画面右側に、ログインユーザーが投稿したお店の情報を一覧表示されます。
+* 画面右側に、ログインユーザーが投稿したお店の情報を最大3件分一覧表示します。
+* 3件を超える場合はページネーションで表示します。
 <!-- マイページ写真 -->
+![26b7103913d3c4a2b027e703767e0e13](https://user-images.githubusercontent.com/55948480/80897368-c5860f80-8d32-11ea-8773-fd91aaf8b763.jpg)
+<img width="1058" alt="f827fdcbd4b4199c4cedb318ed787fd2" src="https://user-images.githubusercontent.com/55948480/80897425-4f35dd00-8d33-11ea-8391-23ca6bdf63cf.png">
 
 ### ニックネーム変更ページ
 * マイページ、ニックネーム変更ボタンから遷移します。
@@ -158,6 +174,8 @@ https://gurumemo.herokuapp.com/
 ### ログアウト機能
 * マイページ、ログアウトボタンからログアウトできます。
 <!-- ログアウトGIF -->
+![e66d8db0f6311f0aad2ddf9e41d61625](https://user-images.githubusercontent.com/55948480/80897452-b6539180-8d33-11ea-841f-f5cb2d800e09.gif)
+
 
 ## 使用技術
 * Rubyバージョン: 2.5.1
